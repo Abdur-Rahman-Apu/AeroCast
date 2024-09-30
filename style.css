@@ -15,29 +15,73 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 100px 1fr 200px;
+  grid-template-rows: 1fr 150px;
   grid-template-areas:
-    "s s s s h h h h h h h h"
-    "s s s s m m m m m m m m"
-    "s s s s f f f f f f f f";
+    "s s s s s s s s s s s s"
+    "m m m m m m m m m m m m";
+  /* grid-template-areas:
+    "s s s h h h h h h h h h"
+    "s s s m m m m m m m m m"
+    "s s s f f f f f f f f f"; */
 }
 
-.header {
-  grid-area: h;
-  background-color: red;
-}
+/* sidebar part start  */
 
 .sidebar {
   grid-area: s;
   background-color: yellow;
 }
 
+/* main part start  */
+
 .main {
   grid-area: m;
   background-color: salmon;
 }
 
+.main-title {
+  min-height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.main-title .line {
+  width: 8vw;
+  height: 5px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.main-title .title {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.weather-data-container {
+  min-height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+
+.weather-data-container > div {
+  width: 22vw;
+  height: 22svw;
+  background-color: #fff;
+}
+
+/* header part start  */
+.header {
+  grid-area: h;
+  background-color: red;
+  display: none;
+}
+
+/* footer part start  */
 .footer {
   grid-area: f;
   background-color: cadetblue;
+  display: none;
 }

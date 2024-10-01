@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecast</title>
 
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="./assets/images/logo/logo.png" type="image/x-icon">
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css file  -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -111,6 +115,42 @@
         </main>
         <footer class="footer">footer</footer>
     </section>
+
+    <!-- menu bar  -->
+    <div class="menu-bar-overlay">
+        <div class="menu-bar-items">
+            <div class="close-menubar">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="menu-bar-main-items">
+                <div class="logo-title">
+                    <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
+                    <p class="website-name">AeroCast</p>
+                </div>
+                <div class="search-country-weather">
+
+                    <form id="menu-form">
+                        <div class="country-name-input">
+                            <label for="country-name">Country Name</label>
+                            <input type="text" id="country-name" name="country-name"
+                                placeholder="Enter country name...">
+                        </div>
+                        <div class="country-city-input">
+                            <label for="city-name">City Name</label>
+                            <input type="text" id="city-name" name="city-name" placeholder="Enter city name...">
+                        </div>
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for search weather information  -->
+    <!-- <div class="modal-overlay">
+
+     </div> -->
 
     <script src="./index.js" type="module"></script>
 </body>

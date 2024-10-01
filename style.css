@@ -5,6 +5,7 @@
 }
 
 body {
+  position: relative;
   width: 100vw;
   height: 100vh;
   /* overflow: hidden; */
@@ -213,6 +214,117 @@ body {
   grid-area: f;
   background-color: cadetblue;
   display: none;
+}
+
+/* menu bar  */
+.menu-bar-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #353333a7;
+  display: none;
+}
+
+.menu-bar-items {
+  background-color: #90c0f0;
+  width: 80%;
+  height: 100%;
+  margin-left: auto;
+  padding: 15px;
+  position: relative;
+}
+
+.close-menubar {
+  text-align: end;
+}
+
+.close-menubar:hover i {
+  transition: all 1s;
+  transform: rotate(360deg);
+}
+
+.close-menubar i {
+  font-size: 1.6rem;
+  color: #2f3640;
+}
+
+.menu-bar-items .menu-bar-main-items {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.menu-bar-items .logo-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-title .website-name {
+  font-family: var(--afacad-font);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2d3436;
+}
+
+.logo-title img {
+  width: 25vw;
+}
+
+#menu-form {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--afacad-font);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+form input:not(input[type="submit"]) {
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 5px 8px;
+  font-weight: bold;
+}
+
+form input::placeholder {
+  font-family: var(--afacad-font);
+  font-weight: 500;
+}
+
+form input:not(input[type="submit"]):focus {
+  border: 1px solid rgb(99, 239, 227);
+}
+
+form input[type="submit"] {
+  padding: 10px 25px;
+  background-color: #2f3640;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px 2px #101010;
+  transition: all 1s;
+}
+
+form input[type="submit"]:hover {
+  box-shadow: none;
 }
 
 @media (min-width: 480px) {

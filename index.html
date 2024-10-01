@@ -131,16 +131,21 @@
                 <div class="search-country-weather">
 
                     <form id="menu-form">
-                        <div class="country-name-input">
+                        <div class="country-name-container">
                             <label for="country-name">Country Name</label>
-                            <input type="text" id="country-name" name="country-name"
-                                placeholder="Enter country name...">
+                            <div class="country-name-input">
+                                <input type="text" id="country-name" name="country-name"
+                                    placeholder="Enter country name...">
+                                <img src="./assets/images/flag.png" alt="This image indicating the flag"
+                                    class="country-flag">
+                            </div>
                         </div>
                         <div class="country-city-input">
                             <label for="city-name">City Name</label>
-                            <input type="text" id="city-name" name="city-name" placeholder="Enter city name...">
+                            <input type="text" id="city-name" name="city-name" placeholder="Enter city name..."
+                                disabled>
                         </div>
-                        <input type="submit" value="Search">
+                        <input type="submit" value="Search" disabled>
                     </form>
                 </div>
             </div>

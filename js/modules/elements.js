@@ -1,6 +1,12 @@
-import { selectElm } from "../utilities/domTask.js";
+import { selectElm } from "./utilities/domTask.js";
 
 const humburgerContainer = selectElm(".humburger-menu");
 const closeMenuBarContainer = selectElm(".close-menubar");
-
-export { closeMenuBarContainer, humburgerContainer };
+const menubarContainer = selectElm(".menu-bar-overlay");
+const menubarItemsContainer = selectElm(".menu-bar-items");
+export {
+  closeMenuBarContainer,
+  humburgerContainer,
+  menubarContainer,
+  menubarItemsContainer,
+};

@@ -1,5 +1,6 @@
 import apiKey from "../../../../api.js";
 import { cityNameInput, nameInput } from "../../../elements.js";
+import showToastMessage from "../../../UI/toastMessage/showToastMessage.js";
 import getWeatherInfo from "../../../utilities/getWeatherInfo.js";
 
 export default async function handleSubmitForm(e) {
@@ -24,9 +25,11 @@ export default async function handleSubmitForm(e) {
 
     if (weatherData.cod === "400" || weatherData.cod === "404") {
       console.log(weatherData.message);
+      showToastMessage({ message: weatherData.message, type: "error" });
     }
   } catch (err) {
     console.log(err.message, "err");
+    showToastMessage({ message: err.message, type: "error" });
   }
 
   //   console.log(weatherData);

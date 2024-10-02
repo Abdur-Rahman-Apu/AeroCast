@@ -19,6 +19,9 @@ const cityNameOptionsContainer = selectElm(".city-name-options");
 
 const submitBtn = selectElm('input[type="submit"');
 
+const toastMessageContainer = selectElm(".toast-message-container");
+const toastMessage = selectElm(".toast-message");
+
 export {
   cityErrMsg,
   cityNameInput,
@@ -34,4 +37,6 @@ export {
   menubarItemsContainer,
   nameInput,
   submitBtn,
+  toastMessage,
+  toastMessageContainer,
 };

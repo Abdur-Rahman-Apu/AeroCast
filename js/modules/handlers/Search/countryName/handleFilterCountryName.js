@@ -4,15 +4,11 @@ import { getCountryInfoIntoArr } from "../../../utilities/countryName.js";
 import { lowerCase } from "../../../utilities/stringFn.js";
 
 export default function handleFilterCountryName(e) {
+  e.stopImmediatePropagation();
   console.log(e.target.value, "value is type name input");
   const countryNameInputValue = e.target.value;
 
   console.log(e.keyCode);
-
-  // set default flag image if input value is empty
-  if (!countryNameInputValue || e.keyCode === 8) {
-    countryFlag.src = "./assets/images/flag.png";
-  }
 
   const countryNames = getCountryInfoIntoArr(countryNameInputValue);
 

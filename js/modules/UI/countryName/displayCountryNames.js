@@ -5,9 +5,9 @@ export default function displayCountryNames(countryNames) {
   const countryNameInfoHtml = countryNames
     .map((item) => {
       return `
-        <div>
-            <img src="${item.flag}" alt="This is indicating the ${item.name} flag image">
-            <p>${item.name}</p>
+        <div data-country=${item.name}>
+            <img src="${item.flag}" alt="This is indicating the ${item.name} flag image" data-country=${item.name}>
+            <p data-country=${item.name}>${item.name}</p>
         </div>
     `;
     })

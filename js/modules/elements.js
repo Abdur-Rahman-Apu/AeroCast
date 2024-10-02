@@ -6,9 +6,11 @@ const menubarContainer = selectElm(".menu-bar-overlay");
 const menubarItemsContainer = selectElm(".menu-bar-items");
 const countryNameInputContainer = selectElm(".country-name-input");
 const nameInput = selectElm("#country-name");
+const countryFlag = selectElm(".country-flag");
 const countryNameOptionsContainer = selectElm(".country-name-options");
 export {
   closeMenuBarContainer,
+  countryFlag,
   countryNameInputContainer,
   countryNameOptionsContainer,
   humburgerContainer,

@@ -349,7 +349,7 @@ form input[type="submit"]:disabled {
 
 .country-name-options {
   position: absolute;
-  top: 100%;
+  top: 60%;
   left: 0;
   width: 100%;
   max-height: 120px;

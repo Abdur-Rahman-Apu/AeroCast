@@ -2,6 +2,7 @@ import { countryFlag } from "../../../elements.js";
 import displayCountryNames from "../../../UI/countryName/displayCountryNames.js";
 import { getCountryInfoIntoArr } from "../../../utilities/countryName.js";
 import { lowerCase } from "../../../utilities/stringFn.js";
+import toggleCityName from "../cityName/toggleCityName.js";
 import toggleSubmitBtn from "../SubmitBtn/toggleSubmitBtn.js";
 
 export default function handleFilterCountryName(e) {
@@ -25,10 +26,12 @@ export default function handleFilterCountryName(e) {
     displayCountryNames(countryNames);
   }
 
-  // toggle submit button
+  // toggle submit button and enable city name input for holding minimum 4 characters of the country name
   if (countryNameInputValue.length >= 4) {
+    toggleCityName({ isDisabled: false });
     toggleSubmitBtn({ isDisabled: false });
   } else {
+    toggleCityName({ isDisabled: true });
     toggleSubmitBtn({ isDisabled: true });
   }
 }

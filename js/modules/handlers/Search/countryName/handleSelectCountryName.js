@@ -30,6 +30,11 @@ export default function handleSelectCountryName(e) {
     }
     // countryFlag.setAttribute("src", flagUrl);
     countryFlag.src = flagUrl;
+
+    // trigger an event programmatically
+    const event = new Event("keyup");
+
+    nameInput.dispatchEvent(event);
   }
 
   countryNameOptionsContainer.innerHTML = "";

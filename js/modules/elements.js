@@ -13,12 +13,14 @@ const countryErrMsg = selectElm(".name-input-err-msg");
 
 const cityNameInput = selectElm("#city-name");
 const cityErrMsg = selectElm(".city-input-err-msg");
+const cityNameOptionsContainer = selectElm(".city-name-options");
 
 const submitBtn = selectElm('input[type="submit"');
 
 export {
   cityErrMsg,
   cityNameInput,
+  cityNameOptionsContainer,
   closeMenuBarContainer,
   countryErrMsg,
   countryFlag,

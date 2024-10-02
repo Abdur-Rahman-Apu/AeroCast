@@ -351,12 +351,17 @@ form input[type="submit"]:disabled {
   position: absolute;
   top: 60%;
   left: 0;
+}
+
+.country-name-options,
+.city-name-options {
   width: 100%;
   max-height: 120px;
   border-radius: 5px;
   box-shadow: 0 5px 5px #353434;
   overflow: auto;
   transition: all 1s;
+  z-index: 100;
 }
 
 .country-name-options > div {
@@ -381,6 +386,23 @@ form input[type="submit"]:disabled {
   opacity: 0;
   scale: 0;
   visibility: hidden;
+}
+
+.country-city-input {
+  position: relative;
+}
+
+.city-name-options {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  background-color: #fff;
+}
+
+.city-name-options > p {
+  padding: 5px;
+  border-bottom: 1px solid #d6d4d4;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

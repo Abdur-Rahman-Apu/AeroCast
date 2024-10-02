@@ -3,6 +3,7 @@ import {
   cityNameOptionsContainer,
   closeMenuBarContainer,
   countryNameOptionsContainer,
+  form,
   humburgerContainer,
   nameInput,
 } from "./elements.js";
@@ -16,11 +17,15 @@ import handleCloseCountryNames from "./handlers/Search/countryName/handleCloseCo
 import handleFilterCountryName from "./handlers/Search/countryName/handleFilterCountryName.js";
 import handleOpenCountryNames from "./handlers/Search/countryName/handleOpenCountryNames.js";
 import handleSelectCountryName from "./handlers/Search/countryName/handleSelectCountryName.js";
+import handleSubmitForm from "./handlers/Search/form/handleSubmitForm.js";
 import { listenEvent } from "./utilities/domTask.js";
 
 export default function listeners() {
   listenEvent(humburgerContainer, "click", handleOpenMenubar);
   listenEvent(closeMenuBarContainer, "click", handleCloseMenubar);
+
+  listenEvent(form, "submit", handleSubmitForm);
+
   listenEvent(nameInput, "focus", handleOpenCountryNames);
   listenEvent(nameInput, "blur", handleCloseCountryNames);
   listenEvent(nameInput, "keyup", handleFilterCountryName);

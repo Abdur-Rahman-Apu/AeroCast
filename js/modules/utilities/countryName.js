@@ -26,4 +26,8 @@ const getCountryInfoIntoArr = (value) => {
   return getCountryInfoWithName(value);
 };
 
-export { getCountryInfoIntoArr };
+const getCountryCode = (countryName) => {
+  return countryInfo[countryName].code;
+};
+
+export { getCountryCode, getCountryInfoIntoArr };

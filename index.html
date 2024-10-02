@@ -131,6 +131,7 @@
                 <div class="search-country-weather">
 
                     <form id="menu-form">
+                        <!-- country name input  -->
                         <div class="country-name-container">
                             <label for="country-name">Country Name</label>
                             <div class="country-name-input">
@@ -138,35 +139,18 @@
                                     placeholder="Enter country name..." autocapitalize="true">
                                 <img src="./assets/images/flag.png" alt="This image indicating the flag"
                                     class="country-flag">
-
+                                <p class="name-input-err-msg">Please fill this field</p>
                                 <div class="country-name-options">
-                                    <!-- <div>
-                                        <img src="https://flagcdn.com/w320/bd.png"
-                                            alt="This is indicating the country image">
-                                        <p>Bangladesh</p>
-                                    </div>
-                                    <div>
-                                        <img src="https://flagcdn.com/w320/in.png"
-                                            alt="This is indicating the country image">
-                                        <p>India</p>
-                                    </div>
-                                    <div>
-                                        <img src="https://flagcdn.com/w320/bd.png"
-                                            alt="This is indicating the country image">
-                                        <p>Bangladesh</p>
-                                    </div>
-                                    <div>
-                                        <img src="https://flagcdn.com/w320/in.png"
-                                            alt="This is indicating the country image">
-                                        <p>India</p>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
+
+                        <!-- country city input  -->
                         <div class="country-city-input">
                             <label for="city-name">City Name</label>
                             <input type="text" id="city-name" name="city-name" placeholder="Enter city name..."
                                 disabled>
+                            <p class="city-input-err-msg">Please fill up the value</p>
                         </div>
                         <input type="submit" value="Search" disabled>
                     </form>

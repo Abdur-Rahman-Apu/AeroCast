@@ -341,9 +341,9 @@ form input[type="submit"]:disabled {
 .country-name-input .country-flag {
   width: 8vw;
   position: absolute;
-  top: 50%;
+  top: 10%;
   right: -8.5svw;
-  transform: translateY(-50%);
+  transform: translateY(-10%);
   object-fit: contain;
 }
 
@@ -371,6 +371,16 @@ form input[type="submit"]:disabled {
 
 .country-name-options > div > img {
   width: 8vw;
+}
+
+.name-input-err-msg,
+.city-input-err-msg {
+  margin-top: 2px;
+  font-weight: 500;
+  color: #353b48;
+  opacity: 0;
+  scale: 0;
+  visibility: hidden;
 }
 
 ::-webkit-scrollbar {

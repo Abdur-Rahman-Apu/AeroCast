@@ -10,7 +10,7 @@ const getCountryInfoWithName = (searchValue) => {
     };
 
     if (searchValue) {
-      if (isInclude(lowerCase(country), lowerCase(value))) {
+      if (isInclude(lowerCase(country), lowerCase(searchValue))) {
         filteredCountryList.push(transformCountryData);
       }
       continue;

@@ -7,6 +7,8 @@ import {
 } from "./elements.js";
 import handleCloseMenubar from "./handlers/Menubar/handleCloseMenubar.js";
 import handleOpenMenubar from "./handlers/Menubar/handleOpenMenubar.js";
+import handleCloseCityNames from "./handlers/Search/cityName/handleCloseCityNames.js";
+import handleFilterCityName from "./handlers/Search/cityName/handleFilterCityName.js";
 import handleOpenCityNames from "./handlers/Search/cityName/handleOpenCityNames.js";
 import handleCloseCountryNames from "./handlers/Search/countryName/handleCloseCountryNames.js";
 import handleFilterCountryName from "./handlers/Search/countryName/handleFilterCountryName.js";
@@ -24,6 +26,6 @@ export default function listeners() {
   listenEvent(countryNameOptionsContainer, "click", handleSelectCountryName);
 
   listenEvent(cityNameInput, "focus", handleOpenCityNames);
-  // listenEvent(nameInput, "blur", handleCloseCountryNames);
-  // listenEvent(nameInput, "keyup", handleFilterCountryName);
+  listenEvent(cityNameInput, "blur", handleCloseCityNames);
+  listenEvent(cityNameInput, "keyup", handleFilterCityName);
 }

@@ -2,6 +2,8 @@ import { weather } from "../../../config.js";
 import {
   feelLikeValue,
   humidityValue,
+  sunriseValue,
+  sunsetValue,
   temperatureType,
   temperatureValue,
   weatherDescription,
@@ -9,6 +11,7 @@ import {
   weatherType,
   windValue,
 } from "../../elements.js";
+import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
 
 export default function displayWeatherInfo() {
   const {
@@ -37,4 +40,7 @@ export default function displayWeatherInfo() {
   windValue.innerText = `${speed}${
     unit === "metric" ? "meter/sec" : "miles/hour"
   }`;
+
+  sunriseValue.innerText = getSunriseOrSunsetTime(sunrise);
+  sunsetValue.innerText = getSunriseOrSunsetTime(sunset);
 }

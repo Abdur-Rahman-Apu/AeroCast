@@ -101,7 +101,8 @@ body {
   align-items: center;
 }
 
-.weather-description {
+.weather-description,
+.weather-type {
   font-size: 1.3rem;
   font-weight: 600;
   color: #fff;

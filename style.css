@@ -23,14 +23,9 @@ body {
   grid-template-areas:
     "s s s s s s s s s s s s"
     "m m m m m m m m m m m m";
-  /* grid-template-areas:
-    "s s s h h h h h h h h h"
-    "s s s m m m m m m m m m"
-    "s s s f f f f f f f f f"; */
 }
 
 /* sidebar part start  */
-
 .sidebar {
   grid-area: s;
   height: 100%;
@@ -50,14 +45,14 @@ body {
 }
 
 .sidebar-upper-overlay {
-  background: rgba(22, 22, 22, 0.235);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(8px);
   width: 90%;
   position: absolute;
   top: 5%;
   left: 5%;
   border-radius: 20px;
+  background: rgba(22, 22, 22, 0.235);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .sidebar-upper-top,
@@ -633,5 +628,87 @@ form input[type="submit"]:disabled {
   form input[type="submit"] {
     font-size: 0.85rem;
     padding: 10px 25px;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    grid-template-rows: 1fr 400px;
+  }
+
+  .sidebar-upper-overlay {
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .location {
+    font-size: 1.25rem;
+  }
+  .location-icon {
+    font-size: 0.95rem;
+  }
+  .location-flag {
+    width: 4vw;
+  }
+  .date {
+    font-size: 1rem;
+  }
+
+  .humburger-menu i {
+    font-size: 1.8rem;
+  }
+
+  .weather-type-icon {
+    width: 10vw;
+  }
+
+  .weather-type {
+    font-size: 1.4rem;
+  }
+
+  .temperature {
+    font-size: 7.5rem;
+  }
+
+  .main-title .title {
+    font-size: 2rem;
+  }
+
+  .weather-data-title {
+    font-size: 1.5rem;
+  }
+
+  .unit-tooltip {
+    width: 120px;
+    right: -15%;
+    font-size: 1.2rem;
+  }
+
+  .unit-tooltip::after {
+    border-width: 8px;
+  }
+
+  .weather-data-title + p,
+  .sunrise-value,
+  .sunset-value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-rows: 80px 1fr 100px;
+    grid-template-areas:
+      "s s s h h h h h h h h h"
+      "s s s m m m m m m m m m"
+      "s s s f f f f f f f f f";
+  }
+
+  .header {
+    display: block;
+  }
+  .footer {
+    display: block;
   }
 }

@@ -31,11 +31,14 @@
                         <div class="location-date">
                             <p class="location">
                                 <i class="fas fa-map-marker-alt location-icon"></i>
-                                <span class="location-name">Dhaka</span>
+                                <span class="location-name">Dhaka, BD</span>
+                                <img src="./assets/images/flag.png" class="location-flag"
+                                    alt="This image is indicating the location flag">
                             </p>
                             <p class="date">
-                                Today, <span class="day"></span>,<span class="time"></span>
+                                Today, <span class="day"></span>, <span class="time"></span>
                             </p>
+
                         </div>
 
                         <div class="humburger-menu">
@@ -45,13 +48,14 @@
                     <div class="sidebar-upper-bottom">
                         <div class="weather-info">
                             <img src="https://openweathermap.org/img/wn/10d@2x.png"
-                                alt="It is an icon which indicates the current weather" class="weather-icon">
-                            <p><span class="weather-type"></span>, <span class="weather-description"></span></p>
+                                alt="It is an icon which indicates the current weather" class="weather-type-icon">
+                            <p class="weather-type">Haze</p>
+                            <p class="cloud-percentage">Clouds: 70%</p>
                         </div>
                         <div class="temperature-info">
-                            <span class="temperature"></span>
+                            <span class="temperature">27</span>
                             <p>o</p>
-                            <p class="temperature-type"></p>
+                            <p class="temperature-type">C</p>
                         </div>
 
                     </div>
@@ -91,8 +95,10 @@
                         <img src="./assets/images/icons/wind.svg" alt="This icon is indicating the wind">
                     </div>
                     <div class="wind-info">
-                        <p class="weather-data-title">Wind</p>
-                        <p class="wind-value">24 miles/s</p>
+                        <p class="weather-data-title">Wind <i
+                                class="fa-duotone fa-solid fa-circle-info unit-info-icon"></i> <span
+                                class="unit-tooltip wind-unit"></span></p>
+                        <p class="wind-value">24</p>
                     </div>
                 </div>
                 <div class="sunrise-sunset-container">
@@ -112,6 +118,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mobile-device-main-part-absolute-section"></div>
         </main>
         <footer class="footer">footer</footer>
     </section>
@@ -139,7 +147,7 @@
                                     placeholder="Enter country name..." autocapitalize="on">
                                 <img src="./assets/images/flag.png" alt="This image indicating the flag"
                                     class="country-flag">
-                                <p class="name-input-err-msg">Please fill this field</p>
+                                <!-- <p class="name-input-err-msg">Please fill this field</p> -->
                                 <div class="country-name-options">
                                 </div>
                             </div>
@@ -150,7 +158,7 @@
                             <label for="city-name">City Name</label>
                             <input type="text" id="city-name" name="city-name" placeholder="Enter city name..." disabled
                                 autocapitalize="on">
-                            <p class="city-input-err-msg">Please fill up the value</p>
+                            <!-- <p class="city-input-err-msg">Please fill up the value</p> -->
                             <div class="city-name-options">
                             </div>
                         </div>

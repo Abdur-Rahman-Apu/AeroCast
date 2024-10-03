@@ -19,7 +19,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 200px;
+  grid-template-rows: 1fr 190px;
   grid-template-areas:
     "s s s s s s s s s s s s"
     "m m m m m m m m m m m m";
@@ -44,8 +44,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
   box-shadow: 3px 3px 2px #565555;
 }
 
@@ -69,25 +69,35 @@ body {
 }
 
 .location {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 4px;
+  font-size: 1rem;
   font-weight: 500;
   color: #fff;
 }
 
 .location-icon {
+  font-size: 0.85rem;
   margin-right: 3px;
 }
 
 .date {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #ffffff;
 }
 
+.location-flag {
+  width: 8vw;
+  margin-left: 5px;
+}
+
 .humburger-menu i {
   color: #fff;
-  font-size: 1.6rem;
+  /* font-size: 1.6rem; */
+  font-size: 1.3rem;
   cursor: pointer;
 }
 
@@ -101,10 +111,21 @@ body {
   align-items: center;
 }
 
-.weather-description,
+.weather-type-icon {
+  width: 25vw;
+  background-color: rgba(104, 99, 99, 0.199);
+  border-radius: 50%;
+}
+
 .weather-type {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
+  color: #fff;
+}
+
+.cloud-percentage {
+  font-size: 1rem;
+  font-weight: 500;
   color: #fff;
 }
 
@@ -115,23 +136,109 @@ body {
 }
 
 .temperature-info p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-right: 4px;
   color: #fff;
   font-weight: 600;
 }
 
 .temperature {
-  font-size: 6rem;
+  /* font-size: 6rem; */
+  font-size: 4rem;
   color: #fff;
 }
 
 /* main part start  */
 .main {
+  position: relative;
   grid-area: m;
   height: 100%;
   font-family: var(--afacad-font);
   padding-top: 20px;
+}
+
+.mobile-device-main-part-absolute-section {
+  position: absolute;
+  left: 0;
+  bottom: 95%;
+  width: 100%;
+  height: 30px;
+  background-color: #fff;
+  clip-path: polygon(
+    100% 100%,
+    0% 100%,
+    0% 33.75%,
+    1.43% 34.49%,
+    2.86% 35.33%,
+    4.29% 36.25%,
+    5.71% 37.24%,
+    7.14% 38.27%,
+    8.57% 39.33%,
+    10% 40.39%,
+    11.43% 41.42%,
+    12.86% 42.42%,
+    14.29% 43.36%,
+    15.71% 44.21%,
+    17.14% 44.96%,
+    18.57% 45.6%,
+    20% 46.12%,
+    21.43% 46.49%,
+    22.86% 46.72%,
+    24.29% 46.8%,
+    25.71% 46.72%,
+    27.14% 46.5%,
+    28.57% 46.13%,
+    30% 45.62%,
+    31.43% 44.98%,
+    32.86% 44.23%,
+    34.29% 43.38%,
+    35.71% 42.45%,
+    37.14% 41.45%,
+    38.57% 40.42%,
+    40% 39.36%,
+    41.43% 38.3%,
+    42.86% 37.27%,
+    44.29% 36.28%,
+    45.71% 35.35%,
+    47.14% 34.51%,
+    48.57% 33.77%,
+    50% 33.14%,
+    51.43% 32.65%,
+    52.86% 32.29%,
+    54.29% 32.08%,
+    55.71% 32.02%,
+    57.14% 32.11%,
+    58.57% 32.36%,
+    60% 32.75%,
+    61.43% 33.27%,
+    62.86% 33.92%,
+    64.29% 34.69%,
+    65.71% 35.55%,
+    67.14% 36.49%,
+    68.57% 37.49%,
+    70% 38.53%,
+    71.43% 39.59%,
+    72.86% 40.65%,
+    74.29% 41.68%,
+    75.71% 42.66%,
+    77.14% 43.58%,
+    78.57% 44.41%,
+    80% 45.14%,
+    81.43% 45.74%,
+    82.86% 46.22%,
+    84.29% 46.56%,
+    85.71% 46.75%,
+    87.14% 46.79%,
+    88.57% 46.68%,
+    90% 46.42%,
+    91.43% 46.01%,
+    92.86% 45.47%,
+    94.29% 44.81%,
+    95.71% 44.03%,
+    97.14% 43.15%,
+    98.57% 42.2%,
+    100% 41.2%
+  );
 }
 
 .main-title {
@@ -151,7 +258,8 @@ body {
 .main-title .title {
   text-align: center;
   padding-top: 5px;
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
@@ -184,8 +292,50 @@ body {
 }
 
 .weather-data-title {
+  position: relative;
   font-weight: 700;
   color: #464545;
+}
+
+.unit-tooltip {
+  width: 80px;
+  height: auto;
+  padding: 2px;
+  background-color: #40407a;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 125%;
+  font-family: var(--afacad-font);
+  font-size: 0.9rem;
+  visibility: hidden;
+  scale: 0;
+  opacity: 0;
+  border-radius: 20px;
+  transition: all 1s;
+  z-index: 100;
+}
+
+.unit-tooltip::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  top: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #40407a transparent transparent transparent;
+}
+
+.unit-info-icon {
+  color: #0ec5f8;
+  margin-left: 2px;
+  font-size: 0.9rem;
+}
+
+.unit-info-icon:hover + .unit-tooltip {
+  visibility: visible;
+  scale: 1;
+  opacity: 1;
 }
 
 .sunrise-info,
@@ -247,7 +397,7 @@ body {
 }
 
 .close-menubar i {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: #2f3640;
 }
 
@@ -268,13 +418,15 @@ body {
 
 .logo-title .website-name {
   font-family: var(--afacad-font);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  /* font-size: 1.8rem; */
   font-weight: 800;
   color: #2d3436;
 }
 
 .logo-title img {
-  width: 25vw;
+  width: 20vw;
+  /* width: 25vw; */
 }
 
 #menu-form {
@@ -290,7 +442,7 @@ body {
 form label {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -313,9 +465,10 @@ form input:not(input[type="submit"]):focus {
 }
 
 form input[type="submit"] {
-  padding: 10px 25px;
+  padding: 8px 18px;
   background-color: #2f3640;
   color: #fff;
+  font-size: 0.8rem;
   font-weight: 600;
   border-radius: 20px;
   border: none;
@@ -341,15 +494,15 @@ form input[type="submit"]:disabled {
 .country-name-input .country-flag {
   width: 8vw;
   position: absolute;
-  top: 10%;
+  top: 50%;
   right: -8.5svw;
-  transform: translateY(-10%);
+  transform: translateY(-50%);
   object-fit: contain;
 }
 
 .country-name-options {
   position: absolute;
-  top: 60%;
+  top: 100%;
   left: 0;
 }
 
@@ -394,7 +547,7 @@ form input[type="submit"]:disabled {
 
 .city-name-options {
   position: absolute;
-  top: 75%;
+  top: 100%;
   left: 0;
   background-color: #fff;
 }
@@ -437,5 +590,48 @@ form input[type="submit"]:disabled {
   background: #999a9b;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 360px) {
+  .location-flag {
+    width: 5vw;
+  }
+  .humburger-menu i {
+    font-size: 1.6rem;
+  }
+
+  .weather-type-icon {
+    width: 15vw;
+  }
+
+  .temperature {
+    font-size: 6rem;
+  }
+
+  .temperature-info p {
+    font-size: 1.1rem;
+  }
+
+  .main-title .title {
+    font-size: 1.4rem;
+  }
+
+  .logo-title img {
+    width: 25vw;
+  }
+
+  .logo-title .website-name {
+    font-size: 1.8rem;
+  }
+
+  .close-menubar i {
+    font-size: 1.6rem;
+  }
+
+  form label {
+    font-size: 1.1rem;
+  }
+
+  form input[type="submit"] {
+    font-size: 0.85rem;
+    padding: 10px 25px;
+  }
 }

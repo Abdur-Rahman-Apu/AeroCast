@@ -27,7 +27,16 @@ const getCountryInfoIntoArr = (value) => {
 };
 
 const getCountryCode = (countryName) => {
+  console.log(countryInfo[countryName].code);
   return countryInfo[countryName].code;
 };
 
-export { getCountryCode, getCountryInfoIntoArr };
+const getCountryNameFromCountryCode = (code) => {
+  for (const country in countryInfo) {
+    if (countryInfo[country].code === code) {
+      return country;
+    }
+  }
+};
+
+export { getCountryCode, getCountryInfoIntoArr, getCountryNameFromCountryCode };

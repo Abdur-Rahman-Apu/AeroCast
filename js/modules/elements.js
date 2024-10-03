@@ -23,10 +23,11 @@ const toastMessageContainer = selectElm(".toast-message-container");
 const toastMessage = selectElm(".toast-message");
 
 const locationName = selectElm(".location-name");
+const locationFlag = selectElm(".location-flag");
 const todayDate = selectElm(".day");
 const todayTime = selectElm(".time");
 const weatherType = selectElm(".weather-type");
-const weatherDescription = selectElm(".weather-description");
+const cloudPercentage = selectElm(".cloud-percentage");
 const weatherIcon = selectElm(".weather-icon");
 const temperatureValue = selectElm(".temperature");
 const temperatureType = selectElm(".temperature-type");
@@ -34,6 +35,7 @@ const temperatureType = selectElm(".temperature-type");
 const feelLikeValue = selectElm(".feel-like-value");
 const humidityValue = selectElm(".humidity-value");
 const windValue = selectElm(".wind-value");
+const windUnit = selectElm(".wind-unit");
 const sunriseValue = selectElm(".sunrise-value");
 const sunsetValue = selectElm(".sunset-value");
 
@@ -42,6 +44,7 @@ export {
   cityNameInput,
   cityNameOptionsContainer,
   closeMenuBarContainer,
+  cloudPercentage,
   countryErrMsg,
   countryFlag,
   countryNameInputContainer,
@@ -50,6 +53,7 @@ export {
   form,
   humburgerContainer,
   humidityValue,
+  locationFlag,
   locationName,
   menubarContainer,
   menubarItemsContainer,
@@ -63,8 +67,8 @@ export {
   toastMessageContainer,
   todayDate,
   todayTime,
-  weatherDescription,
   weatherIcon,
   weatherType,
+  windUnit,
   windValue,
 };

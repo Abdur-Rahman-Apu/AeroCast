@@ -6,4 +6,6 @@ const weather = {
   data: null,
 };
 
-export { weather };
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
+
+export { apiUrl, weather };

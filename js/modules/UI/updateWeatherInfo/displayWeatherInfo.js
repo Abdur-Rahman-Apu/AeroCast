@@ -1,11 +1,8 @@
-import countryInfo from "../../../../assets/data/countryData.js";
 import { weather } from "../../../config.js";
 import {
   cloudPercentage,
   feelLikeValue,
   humidityValue,
-  locationFlag,
-  locationName,
   sunriseValue,
   sunsetValue,
   temperatureType,
@@ -16,6 +13,7 @@ import {
   windValue,
 } from "../../elements.js";
 import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
+import placeLocation from "../PlaceLocation/placeLocation.js";
 
 export default function displayWeatherInfo() {
   const {
@@ -36,14 +34,15 @@ export default function displayWeatherInfo() {
 
   console.log(main, "main");
 
-  if (cityName) {
-    locationName.innerText = `${cityName}, ${countryCode}`;
-  } else {
-    locationName.innerText = `${countryName}`;
-  }
-  console.log(countryName);
+  // if (cityName) {
+  //   locationName.innerText = `${cityName}, ${countryCode}`;
+  // } else {
+  //   locationName.innerText = `${countryName}`;
+  // }
+  // console.log(countryName);
 
-  locationFlag.src = countryInfo[countryName].flag;
+  // locationFlag.src = countryInfo[countryName].flag;
+  placeLocation();
 
   weatherIcon.src = `https://openweathermap.org/img/wn/${icon}.png`;
 

@@ -26,9 +26,14 @@
     <section class="container">
         <aside class="sidebar">
             <div class="sidebar-upper">
+                <div class="sidebar-upper-top-lg-screen-search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p class="search-box">search for location...</p>
+                </div>
                 <div class="sidebar-upper-overlay">
+
                     <div class="sidebar-upper-top">
-                        <div class="location-date">
+                        <!-- <div class="location-date">
                             <p class="location">
                                 <i class="fas fa-map-marker-alt location-icon"></i>
                                 <span class="location-name">Dhaka, BD</span>
@@ -39,7 +44,7 @@
                                 Today, <span class="day"></span>, <span class="time"></span>
                             </p>
 
-                        </div>
+                        </div> -->
 
                         <div class="humburger-menu">
                             <i class="fas fa-bars"></i>
@@ -64,7 +69,16 @@
 
             <div class="sidebar-bottom"></div>
         </aside>
-        <header class="header">header</header>
+        <header class="header">
+            <div class="logo-title">
+                <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
+                <p class="website-name">AeroCast</p>
+            </div>
+            <div class="transform-unit">
+                <div class="transform-unit-celcius"><span class="celcius"><sup>o</sup>C</span></div>
+                <div class="transform-unit-farenhite"><span class="celcius"><sup>o</sup>F</span></div>
+            </div>
+        </header>
         <main class="main">
             <div class="main-title">
                 <p class="line"></p>
@@ -83,7 +97,7 @@
                 </div>
                 <div class="humidity-container">
                     <div class="weather-icon">
-                        <img src="./assets/images/icons/humidity.svg" alt="This icon is indicating the humidity">
+                        <img src="./assets/images/icons/humidity.png" alt="This icon is indicating the humidity">
                     </div>
                     <div class="humidity-info">
                         <p class="weather-data-title">Humidity</p>
@@ -101,27 +115,59 @@
                         <p class="wind-value">24</p>
                     </div>
                 </div>
+                <div class="pressure-container">
+                    <div class="weather-icon">
+                        <img src="./assets/images/icons/atmospheric.png"
+                            alt="This icon is indicating the pressure of the atmosphere">
+                    </div>
+                    <div class="pressure-info">
+                        <p class="weather-data-title">Pressure</p>
+                        <p class="pressure-value">24 hPa</p>
+                    </div>
+                </div>
+                <div class="temperature-container">
+                    <div class="weather-icon">
+                        <img src="./assets/images/icons/temperature.png" alt="This icon is indicating the wind">
+                    </div>
+                    <p class="weather-data-title">Max & Min Temp</p>
+                    <div class="max-min-temperature-info">
+                        <div class="max-temp-info">
+                            <img src="./assets/images/icons/arrow-up.svg"
+                                alt="This icon is indicating the maximum temperature">
+                            <p class="max-temp-value">18 <sup>o</sup></p>
+                        </div>
+                        <div class="min-temp-info">
+                            <img src="./assets/images/icons/arrow-down.svg"
+                                alt="This icon is indicating the minimum temperature info">
+                            <p class="min-temp-value">18 <sup>o</sup></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="sunrise-sunset-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/sun.svg" alt="This icon is indicating the sunrise and sunset">
                     </div>
 
-                    <div class="sunrise-info">
-                        <img src="./assets/images/icons/arrow-up.svg"
-                            alt="This icon is indicating the sunrise and sunset">
-                        <p class="sunrise-value">5:01</p>
-                    </div>
-                    <div class="sunset-info">
-                        <img src="./assets/images/icons/arrow-down.svg"
-                            alt="This icon is indicating the sunrise and sunset">
-                        <p class="sunset-value">7:01</p>
+                    <p class="weather-data-title">Sunrise & Sunset Info</p>
+
+                    <div class="sunrise-sunset-info">
+                        <div class="sunrise-info">
+                            <img src="./assets/images/icons/arrow-up.svg"
+                                alt="This icon is indicating the sunrise and sunset">
+                            <p class="sunrise-value">5:01</p>
+                        </div>
+                        <div class="sunset-info">
+                            <img src="./assets/images/icons/arrow-down.svg"
+                                alt="This icon is indicating the sunrise and sunset">
+                            <p class="sunset-value">7:01</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="mobile-device-main-part-absolute-section"></div>
         </main>
-        <footer class="footer">footer</footer>
+        <!-- <footer class="footer">footer</footer> -->
     </section>
 
     <!-- menu bar  -->

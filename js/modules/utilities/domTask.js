@@ -6,7 +6,7 @@ const listenEvent = (elm, eventName, handler) =>
 const addStyle = (elm, style) => Object.assign(elm.style, style);
 
 const insertAdjacentHtml = (parent, html, pos) =>
-  parent.insertAdjacentHtml(pos, html);
+  parent.insertAdjacentHTML(pos, html);
 
 const getAttr = (elm, name) => elm.getAttribute(name);
 const setAttr = (elm, name, value) => elm.setAttribute(name, value);

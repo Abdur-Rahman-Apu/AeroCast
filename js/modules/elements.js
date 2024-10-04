@@ -68,6 +68,10 @@ const pressureValue = selectElm(".pressure-value");
 const maxTempValue = selectElm(".max-temp-value");
 const minTempValue = selectElm(".min-temp-value");
 
+const largeScreenSearchBoxElm = selectElm(
+  ".sidebar-upper-top-lg-screen-search"
+);
+
 export {
   cityNameInput,
   cityNameOptionsContainer,
@@ -82,6 +86,7 @@ export {
   header,
   humburgerContainer,
   humidityValue,
+  largeScreenSearchBoxElm,
   locationFlag,
   locationName,
   maxTempValue,

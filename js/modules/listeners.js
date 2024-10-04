@@ -5,6 +5,7 @@ import {
   closeModalContainer,
   countryNameOptionsContainer,
   humburgerContainer,
+  largeScreenSearchBoxElm,
   menuForm,
   modalCityNameInput,
   modalCityNameOptionsContainer,
@@ -18,6 +19,7 @@ import handleConvertUnit from "./handlers/ConvertUnit/handleConvertUnit.js";
 import handleCloseMenubar from "./handlers/Menubar/handleCloseMenubar.js";
 import handleOpenMenubar from "./handlers/Menubar/handleOpenMenubar.js";
 import handleCloseModal from "./handlers/modal/handleCloseModal.js";
+import handleOpenModal from "./handlers/modal/handleOpenModal.js";
 import handleCloseCityNames from "./handlers/Search/cityName/handleCloseCityNames.js";
 import handleFilterCityName from "./handlers/Search/cityName/handleFilterCityName.js";
 import handleOpenCityNames from "./handlers/Search/cityName/handleOpenCityNames.js";
@@ -51,6 +53,7 @@ export default function listeners() {
   }
 
   if (screen.width >= 1024) {
+    listenEvent(largeScreenSearchBoxElm, "click", handleOpenModal);
     listenEvent(closeModalContainer, "click", handleCloseModal);
     listenEvent(modalForm, "submit", handleSubmitForm);
     listenEvent(modalNameInput, "focus", handleOpenCountryNames);

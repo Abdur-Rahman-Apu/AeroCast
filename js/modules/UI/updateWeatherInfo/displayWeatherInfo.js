@@ -18,6 +18,7 @@ import {
 } from "../../elements.js";
 import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
 import { getCurrentTime } from "../../utilities/getTodayDateTime.js";
+import { lowerCase } from "../../utilities/stringFn.js";
 import placeLocation from "../PlaceLocation/placeLocation.js";
 
 export default function displayWeatherInfo() {
@@ -40,17 +41,9 @@ export default function displayWeatherInfo() {
 
   console.log(main, "main");
 
-  // if (cityName) {
-  //   locationName.innerText = `${cityName}, ${countryCode}`;
-  // } else {
-  //   locationName.innerText = `${countryName}`;
-  // }
-  // console.log(countryName);
-
-  // locationFlag.src = countryInfo[countryName].flag;
   placeLocation();
 
-  weatherIcon.src = `https://openweathermap.org/img/wn/${icon}.png`;
+  weatherIcon.src = `./assets/images/icons/weather-type/${lowerCase(main)}.png`;
 
   weatherType.innerText = main;
 

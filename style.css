@@ -113,8 +113,8 @@ body {
 
 .weather-type-icon {
   width: 25vw;
-  background-color: rgba(104, 99, 99, 0.199);
-  border-radius: 50%;
+  /* background-color: rgba(104, 99, 99, 0.199); */
+  /* border-radius: 50%; */
 }
 
 .weather-type {
@@ -762,6 +762,10 @@ form input[type="submit"]:disabled {
 
   .sidebar-upper-bottom {
     flex-direction: column;
+  }
+
+  .weather-type-icon {
+    width: 5vw;
   }
 
   .header {

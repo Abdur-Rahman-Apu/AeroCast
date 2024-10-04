@@ -28,7 +28,7 @@ const locationFlag = selectElm(".location-flag");
 
 const weatherType = selectElm(".weather-type");
 const cloudPercentage = selectElm(".cloud-percentage");
-const weatherIcon = selectElm(".weather-icon");
+const weatherIcon = selectElm(".weather-type-icon");
 const temperatureValue = selectElm(".temperature");
 const temperatureType = selectElm(".temperature-type");
 

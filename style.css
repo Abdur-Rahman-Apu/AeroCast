@@ -830,7 +830,8 @@ form input[type="submit"]:disabled {
     justify-content: space-between;
     align-items: center;
     padding: 0 8px;
-    background-color: #ffd87d;
+    /* background-color: #ffd87d; */
+    background: linear-gradient(to right, #82ccdd, #fad390);
     box-shadow: 0 5px 5px #c5c1c1;
   }
 
@@ -924,14 +925,20 @@ form input[type="submit"]:disabled {
   }
 
   .weather-data-container > div {
-    border: 1px solid rgb(187, 180, 180);
-    box-shadow: 2px 2px 2px #bebcbc;
     flex-basis: 25%;
-    display: flex;
     height: 180px;
+    display: flex;
+    padding: 10px;
     margin-bottom: 6px;
     border-radius: 20px;
-    padding: 10px;
+    border: 1px solid rgb(199, 196, 196);
+    box-shadow: 2px 2px 2px #bebcbc;
+    cursor: pointer;
+    background-color: #f1f2f6;
+    transition: all 1s;
+  }
+  .weather-data-container > div:hover {
+    box-shadow: 5px 5px 5px #bebcbc;
   }
 
   .weather-data-container > div .weather-icon {

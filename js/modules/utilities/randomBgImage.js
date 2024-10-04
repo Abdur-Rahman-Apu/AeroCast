@@ -91,7 +91,7 @@ const changeBgImage = (weatherType) => {
   setInterval(() => {
     const url = chooseImgRandomly(lowerCase(weatherType));
     addStyle(sidebarUpperContainer, { backgroundImage: `url(${url})` });
-  }, 6000);
+  }, 10 * 1000);
 };
 
 export { changeBgImage };

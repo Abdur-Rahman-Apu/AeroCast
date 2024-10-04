@@ -1,8 +1,12 @@
 import { weather } from "../../../config.js";
 import {
   cloudPercentage,
+  dataUpdateTime,
   feelLikeValue,
   humidityValue,
+  maxTempValue,
+  minTempValue,
+  pressureValue,
   sunriseValue,
   sunsetValue,
   temperatureType,
@@ -13,16 +17,18 @@ import {
   windValue,
 } from "../../elements.js";
 import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
+import { getCurrentTime } from "../../utilities/getTodayDateTime.js";
 import placeLocation from "../PlaceLocation/placeLocation.js";
 
 export default function displayWeatherInfo() {
   const {
     data: {
       weather: mainWeatherInfo,
-      main: { temp, feels_like, humidity },
+      main: { temp, feels_like, humidity, pressure, temp_max, temp_min },
       wind: { speed },
       sys: { sunrise, sunset },
       clouds: { all: clouds },
+      dt,
     },
     unit,
     countryName,
@@ -50,6 +56,8 @@ export default function displayWeatherInfo() {
 
   cloudPercentage.innerText = `Clouds: ${clouds}%`;
 
+  dataUpdateTime.innerText = `${getCurrentTime(dt)}`;
+
   temperatureValue.innerText = `${Math.floor(temp)}`;
   temperatureType.innerText = unit === "metric" ? "C" : "F";
 
@@ -63,4 +71,10 @@ export default function displayWeatherInfo() {
   console.log(sunrise, sunset);
   sunriseValue.innerText = getSunriseOrSunsetTime(sunrise);
   sunsetValue.innerText = getSunriseOrSunsetTime(sunset);
+
+  if (screen.width >= 1024) {
+    pressureValue.innerText = `${pressure} hPa`;
+    maxTempValue.innerHTML = `${temp_max}<sup>o</sup>`;
+    minTempValue.innerHTML = `${temp_min}<sup>o</sup>`;
+  }
 }

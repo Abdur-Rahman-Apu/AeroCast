@@ -34,12 +34,16 @@ const temperatureType = selectElm(".temperature-type");
 
 const header = selectElm(".header");
 
+const dataUpdateTime = selectElm(".data-update-time");
 const feelLikeValue = selectElm(".feel-like-value");
 const humidityValue = selectElm(".humidity-value");
 const windValue = selectElm(".wind-value");
 const windUnit = selectElm(".wind-unit");
 const sunriseValue = selectElm(".sunrise-value");
 const sunsetValue = selectElm(".sunset-value");
+const pressureValue = selectElm(".pressure-value");
+const maxTempValue = selectElm(".max-temp-value");
+const minTempValue = selectElm(".min-temp-value");
 
 export {
   cityErrMsg,
@@ -51,6 +55,7 @@ export {
   countryFlag,
   countryNameInputContainer,
   countryNameOptionsContainer,
+  dataUpdateTime,
   feelLikeValue,
   form,
   header,
@@ -58,9 +63,12 @@ export {
   humidityValue,
   locationFlag,
   locationName,
+  maxTempValue,
   menubarContainer,
   menubarItemsContainer,
+  minTempValue,
   nameInput,
+  pressureValue,
   sidebarUpperTopContainer,
   submitBtn,
   sunriseValue,

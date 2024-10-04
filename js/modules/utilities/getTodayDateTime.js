@@ -24,8 +24,12 @@ function getTodayDate() {
   return `${actualMonth} ${actualDate}`;
 }
 
-const getCurrentTime = () => {
-  const dateConstructor = new Date();
+const getCurrentTime = (time) => {
+  let dateConstructor = new Date();
+
+  if (time) {
+    dateConstructor = new Date(time);
+  }
   const date = dateConstructor.toLocaleTimeString().split(":");
 
   const timeIndicator = date[date.length - 1].split(" ")[1];

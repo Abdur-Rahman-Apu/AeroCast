@@ -844,6 +844,13 @@ form input[type="submit"]:disabled {
     min-height: 20%;
   }
 
+  .update-time {
+    text-align: center;
+    font-family: var(--afacad-font);
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
   .weather-data-container {
     max-height: 0;
     flex-wrap: wrap;

@@ -5,19 +5,36 @@ const closeMenuBarContainer = selectElm(".close-menubar");
 const menubarContainer = selectElm(".menu-bar-overlay");
 const menubarItemsContainer = selectElm(".menu-bar-items");
 
-const form = selectElm("form");
+const menuForm = selectElm("#menu-form");
 
 const countryNameInputContainer = selectElm(".country-name-input");
 const nameInput = selectElm("#country-name");
 const countryFlag = selectElm(".country-flag");
 const countryNameOptionsContainer = selectElm(".country-name-options");
-const countryErrMsg = selectElm(".name-input-err-msg");
 
 const cityNameInput = selectElm("#city-name");
-const cityErrMsg = selectElm(".city-input-err-msg");
 const cityNameOptionsContainer = selectElm(".city-name-options");
 
 const submitBtn = selectElm('input[type="submit"');
+
+const modalForm = selectElm("#modal-form");
+
+const modalCountryNameInputContainer = selectElm(
+  "#modal-form .country-name-input"
+);
+const modalNameInput = selectElm("#modal-form #country-name");
+const modalCountryFlag = selectElm("#modal-form .country-flag");
+const modalCountryNameOptionsContainer = selectElm(
+  "#modal-form .country-name-options"
+);
+
+const modalCityNameInput = selectElm("#modal-form #city-name");
+
+const modalCityNameOptionsContainer = selectElm(
+  "#modal-form .city-name-options"
+);
+
+const modalSubmitBtn = selectElm('#modal-form input[type="submit"');
 
 const toastMessageContainer = selectElm(".toast-message-container");
 const toastMessage = selectElm(".toast-message");
@@ -49,18 +66,15 @@ const maxTempValue = selectElm(".max-temp-value");
 const minTempValue = selectElm(".min-temp-value");
 
 export {
-  cityErrMsg,
   cityNameInput,
   cityNameOptionsContainer,
   closeMenuBarContainer,
   cloudPercentage,
-  countryErrMsg,
   countryFlag,
   countryNameInputContainer,
   countryNameOptionsContainer,
   dataUpdateTime,
   feelLikeValue,
-  form,
   header,
   humburgerContainer,
   humidityValue,
@@ -69,7 +83,16 @@ export {
   maxTempValue,
   menubarContainer,
   menubarItemsContainer,
+  menuForm,
   minTempValue,
+  modalCityNameInput,
+  modalCityNameOptionsContainer,
+  modalCountryFlag,
+  modalCountryNameInputContainer,
+  modalCountryNameOptionsContainer,
+  modalForm,
+  modalNameInput,
+  modalSubmitBtn,
   nameInput,
   pressureValue,
   sidebarUpperTopContainer,

@@ -1,8 +1,26 @@
 import {
   countryFlag,
   countryNameOptionsContainer,
+  modalCountryFlag,
+  modalCountryNameOptionsContainer,
+  modalNameInput,
   nameInput,
 } from "../../../elements.js";
+import isModal from "../../../UI/isModal/isModal.js";
+
+function updateCountryInfo({ nameInput, countryFlag, flagUrl, countryName }) {
+  nameInput.value = countryName;
+  // countryFlag.setAttribute("src", flagUrl);
+  countryFlag.src = flagUrl;
+
+  // trigger an event programmatically
+
+  console.log(nameInput);
+
+  const event = new Event("keyup");
+
+  nameInput.dispatchEvent(event);
+}
 
 export default function handleSelectCountryName(e) {
   console.log("select country name");
@@ -15,8 +33,6 @@ export default function handleSelectCountryName(e) {
   console.log(e.target.tagName, "type");
 
   if (countryName) {
-    nameInput.value = countryName;
-
     let flagUrl = "";
     if (e.target.tagName === "P") {
       console.log(e.target.previousElementSibling, "pres");
@@ -28,14 +44,18 @@ export default function handleSelectCountryName(e) {
       console.log(e.target.src, "img");
       flagUrl = e.target.getAttribute("src");
     }
-    // countryFlag.setAttribute("src", flagUrl);
-    countryFlag.src = flagUrl;
 
-    // trigger an event programmatically
-    const event = new Event("keyup");
+    const updateInfo = {
+      nameInput: isModal(e) ? modalNameInput : nameInput,
+      countryFlag: isModal(e) ? modalCountryFlag : countryFlag,
+      countryName,
+      flagUrl,
+    };
 
-    nameInput.dispatchEvent(event);
+    updateCountryInfo(updateInfo);
   }
 
-  countryNameOptionsContainer.innerHTML = "";
+  isModal(e)
+    ? (modalCountryNameOptionsContainer.innerHTML = "")
+    : (countryNameOptionsContainer.innerHTML = "");
 }

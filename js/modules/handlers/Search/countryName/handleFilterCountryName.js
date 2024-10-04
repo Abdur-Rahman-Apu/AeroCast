@@ -1,5 +1,6 @@
-import { countryFlag } from "../../../elements.js";
+import { countryFlag, modalCountryFlag } from "../../../elements.js";
 import displayCountryNames from "../../../UI/countryName/displayCountryNames.js";
+import isModal from "../../../UI/isModal/isModal.js";
 import { getCountryInfoIntoArr } from "../../../utilities/countryName.js";
 import { lowerCase } from "../../../utilities/stringFn.js";
 import toggleCityName from "../cityName/toggleCityName.js";
@@ -19,19 +20,21 @@ export default function handleFilterCountryName(e) {
     countryNames.length === 1 &&
     lowerCase(countryNames[0].name) === lowerCase(countryNameInputValue);
 
+  let countryFlagElm = isModal(e) ? modalCountryFlag : countryFlag;
+
   if (isTypedCountryMatched) {
-    countryFlag.src = countryNames[0].flag;
+    countryFlagElm.src = countryNames[0].flag;
   } else {
-    countryFlag.src = "./assets/images/flag.png";
-    displayCountryNames(countryNames);
+    countryFlagElm.src = "./assets/images/flag.png";
+    displayCountryNames(e, countryNames);
   }
 
   // toggle submit button and enable city name input for holding minimum 4 characters of the country name
   if (countryNameInputValue.length >= 4) {
-    toggleCityName({ isDisabled: false });
-    toggleSubmitBtn({ isDisabled: false });
+    toggleCityName({ targetElm: e, isDisabled: false });
+    toggleSubmitBtn({ targetElm: e, isDisabled: false });
   } else {
-    toggleCityName({ isDisabled: true });
-    toggleSubmitBtn({ isDisabled: true });
+    toggleCityName({ targetElm: e, isDisabled: true });
+    toggleSubmitBtn({ targetElm: e, isDisabled: true });
   }
 }

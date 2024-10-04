@@ -10,7 +10,9 @@ import displayCurrentDate from "../Date/displayCurrentDate.js";
 import displayCurrentTime from "../Time/displayCurrentTime.js";
 
 export default function placeLocation() {
-  if (document.querySelector(".location-date")) return;
+  if (document.querySelector(".location-date")) {
+    document.querySelector(".location-date").remove();
+  }
 
   const { countryName, cityName, countryCode } = weather;
 

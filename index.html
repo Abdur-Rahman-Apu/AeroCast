@@ -33,18 +33,6 @@
                 <div class="sidebar-upper-overlay">
 
                     <div class="sidebar-upper-top">
-                        <!-- <div class="location-date">
-                            <p class="location">
-                                <i class="fas fa-map-marker-alt location-icon"></i>
-                                <span class="location-name">Dhaka, BD</span>
-                                <img src="./assets/images/flag.png" class="location-flag"
-                                    alt="This image is indicating the location flag">
-                            </p>
-                            <p class="date">
-                                Today, <span class="day"></span>, <span class="time"></span>
-                            </p>
-
-                        </div> -->
 
                         <div class="humburger-menu">
                             <i class="fas fa-bars"></i>
@@ -221,9 +209,41 @@
     </div>
 
     <!-- modal for search weather information  -->
-    <!-- <div class="modal-overlay">
+    <div class="modal-overlay">
+        <div class="search-container">
+            <div class="logo-title">
+                <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
+                <p class="website-name">AeroCast</p>
+            </div>
 
-     </div> -->
+            <form id="modal-form">
+                <!-- country name input  -->
+                <div class="country-name-container">
+                    <label for="country-name">Country Name</label>
+                    <div class="country-name-input">
+                        <input type="text" id="country-name" name="country-name" placeholder="Enter country name..."
+                            autocapitalize="on">
+                        <img src="./assets/images/flag.png" alt="This image indicating the flag" class="country-flag">
+                        <!-- <p class="name-input-err-msg">Please fill this field</p> -->
+                        <div class="country-name-options">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- country city input  -->
+                <div class="country-city-input">
+                    <label for="city-name">City Name</label>
+                    <input type="text" id="city-name" name="city-name" placeholder="Enter city name..." disabled
+                        autocapitalize="on">
+                    <!-- <p class="city-input-err-msg">Please fill up the value</p> -->
+                    <div class="city-name-options">
+                    </div>
+                </div>
+                <input type="submit" value="Search" disabled>
+            </form>
+
+        </div>
+    </div>
 
 
     <!-- toast message  -->

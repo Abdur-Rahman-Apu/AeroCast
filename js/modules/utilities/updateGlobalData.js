@@ -12,6 +12,8 @@ export default function updateGlobalData({ data, countryName, cityName }) {
     console.log(getCountryCode, "country code");
     if (cityName) {
       weather.cityName = cityName;
+    } else {
+      weather.cityName = null;
     }
     Object.assign(weather, { data, countryName, countryCode });
     // weather = { ...weather, data, countryName, countryCode };

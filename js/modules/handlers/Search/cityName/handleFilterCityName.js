@@ -1,5 +1,6 @@
-import { nameInput } from "../../../elements.js";
+import { modalNameInput, nameInput } from "../../../elements.js";
 import displayCityNames from "../../../UI/cityName/displayCityNames.js";
+import isModal from "../../../UI/isModal/isModal.js";
 import { getCities } from "../../../utilities/cityName.js";
 import {
   capitalize,
@@ -11,7 +12,9 @@ export default function handleFilterCityName(e) {
   const cityName = e.target.value;
   console.log(cityName, "city name");
 
-  const countryName = capitalize(nameInput.value);
+  const countryName = capitalize(
+    isModal(e) ? modalNameInput.value : nameInput.value
+  );
   console.log(countryName, "country name");
   const cities = getCities(countryName);
 
@@ -24,5 +27,5 @@ export default function handleFilterCityName(e) {
     filteredCities = cities;
   }
 
-  displayCityNames(filteredCities);
+  displayCityNames(e, filteredCities);
 }

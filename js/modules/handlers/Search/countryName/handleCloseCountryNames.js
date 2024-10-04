@@ -1,8 +1,18 @@
-import { countryNameOptionsContainer } from "../../../elements.js";
+import {
+  countryNameOptionsContainer,
+  modalCountryNameOptionsContainer,
+} from "../../../elements.js";
+import isModal from "../../../UI/isModal/isModal.js";
 
-export default function handleCloseCountryNames() {
+export default function handleCloseCountryNames(e) {
+  console.log(e.target, e, "close country");
+  console.log(isModal(e));
   console.log("close country names");
   setTimeout(() => {
-    countryNameOptionsContainer.innerHTML = "";
+    if (isModal(e)) {
+      modalCountryNameOptionsContainer.innerHTML = "";
+    } else {
+      countryNameOptionsContainer.innerHTML = "";
+    }
   }, 500);
 }

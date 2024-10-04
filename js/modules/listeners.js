@@ -3,8 +3,13 @@ import {
   cityNameOptionsContainer,
   closeMenuBarContainer,
   countryNameOptionsContainer,
-  form,
   humburgerContainer,
+  menuForm,
+  modalCityNameInput,
+  modalCityNameOptionsContainer,
+  modalCountryNameOptionsContainer,
+  modalForm,
+  modalNameInput,
   nameInput,
   transformUnitContainer,
 } from "./elements.js";
@@ -28,16 +33,36 @@ export default function listeners() {
 
   listenEvent(transformUnitContainer, "click", handleConvertUnit);
 
-  listenEvent(form, "submit", handleSubmitForm);
+  if (screen.width < 1024) {
+    listenEvent(menuForm, "submit", handleSubmitForm);
 
-  listenEvent(nameInput, "focus", handleOpenCountryNames);
-  listenEvent(nameInput, "blur", handleCloseCountryNames);
-  listenEvent(nameInput, "keyup", handleFilterCountryName);
-  // listenEvent(menubarContainer, "click", handleClickOnMenubar);
-  listenEvent(countryNameOptionsContainer, "click", handleSelectCountryName);
+    listenEvent(nameInput, "focus", handleOpenCountryNames);
+    listenEvent(nameInput, "blur", handleCloseCountryNames);
+    listenEvent(nameInput, "keyup", handleFilterCountryName);
+    // listenEvent(menubarContainer, "click", handleClickOnMenubar);
+    listenEvent(countryNameOptionsContainer, "click", handleSelectCountryName);
 
-  listenEvent(cityNameInput, "focus", handleOpenCityNames);
-  listenEvent(cityNameInput, "blur", handleCloseCityNames);
-  listenEvent(cityNameInput, "keyup", handleFilterCityName);
-  listenEvent(cityNameOptionsContainer, "click", handleSelectCityName);
+    listenEvent(cityNameInput, "focus", handleOpenCityNames);
+    listenEvent(cityNameInput, "blur", handleCloseCityNames);
+    listenEvent(cityNameInput, "keyup", handleFilterCityName);
+    listenEvent(cityNameOptionsContainer, "click", handleSelectCityName);
+  }
+
+  if (screen.width >= 1024) {
+    listenEvent(modalForm, "submit", handleSubmitForm);
+    listenEvent(modalNameInput, "focus", handleOpenCountryNames);
+    listenEvent(modalNameInput, "blur", handleCloseCountryNames);
+    listenEvent(modalNameInput, "keyup", handleFilterCountryName);
+    // listenEvent(menubarContainer, "click", handleClickOnMenubar);
+    listenEvent(
+      modalCountryNameOptionsContainer,
+      "click",
+      handleSelectCountryName
+    );
+
+    listenEvent(modalCityNameInput, "focus", handleOpenCityNames);
+    listenEvent(modalCityNameInput, "blur", handleCloseCityNames);
+    listenEvent(modalCityNameInput, "keyup", handleFilterCityName);
+    listenEvent(modalCityNameOptionsContainer, "click", handleSelectCityName);
+  }
 }

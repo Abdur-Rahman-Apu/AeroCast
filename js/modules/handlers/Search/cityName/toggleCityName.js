@@ -1,8 +1,11 @@
-import { cityNameInput } from "../../../elements.js";
+import { cityNameInput, modalCityNameInput } from "../../../elements.js";
+import isModal from "../../../UI/isModal/isModal.js";
 import { removeAttr, setAttr } from "../../../utilities/domTask.js";
 
-export default function toggleCityName({ isDisabled }) {
+export default function toggleCityName({ targetElm, isDisabled }) {
+  let cityInputElm = isModal(targetElm) ? modalCityNameInput : cityNameInput;
+
   isDisabled
-    ? setAttr(cityNameInput, "disabled", true)
-    : removeAttr(cityNameInput, "disabled");
+    ? setAttr(cityInputElm, "disabled", true)
+    : removeAttr(cityInputElm, "disabled");
 }

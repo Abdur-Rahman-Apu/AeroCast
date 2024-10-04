@@ -4,6 +4,7 @@ import retrieveFromStorage from "../storage/retrieveFromStorage.js";
 import showToastMessage from "../UI/toastMessage/showToastMessage.js";
 import apiFormat from "../utilities/apiFormat.js";
 import getWeatherInfo from "../utilities/getWeatherInfo.js";
+import sendApiRequest from "../utilities/sendApiRequest.js";
 
 async function retrieveLocationSuccess(position) {
   const { latitude, longitude } = position.coords;
@@ -32,6 +33,14 @@ async function retrieveLocationError(error) {
 }
 
 export default async function currentLocationInfo() {
+  const weatherDataIntoStorage = retrieveFromStorage();
+
+  if (weatherDataIntoStorage) {
+    const { countryName, cityName } = weatherDataIntoStorage;
+    await sendApiRequest({ countryName, cityName });
+    return;
+  }
+
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
       retrieveLocationSuccess,

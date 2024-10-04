@@ -33,6 +33,9 @@ const temperatureValue = selectElm(".temperature");
 const temperatureType = selectElm(".temperature-type");
 
 const header = selectElm(".header");
+const transformUnitContainer = selectElm(".transform-unit");
+const transformUnitCelcius = selectElm(".transform-unit-celcius");
+const transformUnitFarenhite = selectElm(".transform-unit-farenhite");
 
 const dataUpdateTime = selectElm(".data-update-time");
 const feelLikeValue = selectElm(".feel-like-value");
@@ -77,6 +80,9 @@ export {
   temperatureValue,
   toastMessage,
   toastMessageContainer,
+  transformUnitCelcius,
+  transformUnitContainer,
+  transformUnitFarenhite,
   weatherIcon,
   weatherType,
   windUnit,

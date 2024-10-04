@@ -815,6 +815,10 @@ form input[type="submit"]:disabled {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+  }
+
+  .celcius,
+  .farenhite {
     cursor: pointer;
   }
 
@@ -848,7 +852,7 @@ form input[type="submit"]:disabled {
     text-align: center;
     font-family: var(--afacad-font);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .weather-data-container {

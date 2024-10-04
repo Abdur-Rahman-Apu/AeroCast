@@ -6,7 +6,9 @@ import {
   form,
   humburgerContainer,
   nameInput,
+  transformUnitContainer,
 } from "./elements.js";
+import handleConvertUnit from "./handlers/ConvertUnit/handleConvertUnit.js";
 import handleCloseMenubar from "./handlers/Menubar/handleCloseMenubar.js";
 import handleOpenMenubar from "./handlers/Menubar/handleOpenMenubar.js";
 import handleCloseCityNames from "./handlers/Search/cityName/handleCloseCityNames.js";
@@ -23,6 +25,8 @@ import { listenEvent } from "./utilities/domTask.js";
 export default function listeners() {
   listenEvent(humburgerContainer, "click", handleOpenMenubar);
   listenEvent(closeMenuBarContainer, "click", handleCloseMenubar);
+
+  listenEvent(transformUnitContainer, "click", handleConvertUnit);
 
   listenEvent(form, "submit", handleSubmitForm);
 

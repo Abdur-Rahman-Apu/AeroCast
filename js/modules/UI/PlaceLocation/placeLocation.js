@@ -30,7 +30,7 @@ export default function placeLocation() {
   const locationInfoHtml = `
         <div class="location-date">
             <p class="location">
-                <i class="fas fa-map-marker-alt location-icon"></i>
+                <i class="fa-solid fa-earth-americas location-icon"></i>
                 <span class="location-name">${locationName}</span>
                     <img src="${flgUrl}" class="location-flag"
                             alt="This image is indicating the location flag">

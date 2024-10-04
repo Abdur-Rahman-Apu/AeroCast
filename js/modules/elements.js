@@ -42,6 +42,7 @@ const modalSubmitBtn = selectElm('#modal-form input[type="submit"');
 const toastMessageContainer = selectElm(".toast-message-container");
 const toastMessage = selectElm(".toast-message");
 
+const sidebarUpperContainer = selectElm(".sidebar-upper");
 const sidebarUpperTopContainer = selectElm(".sidebar-upper-top");
 const locationName = selectElm(".location-name");
 const locationFlag = selectElm(".location-flag");
@@ -105,6 +106,7 @@ export {
   modalSubmitBtn,
   nameInput,
   pressureValue,
+  sidebarUpperContainer,
   sidebarUpperTopContainer,
   submitBtn,
   sunriseValue,

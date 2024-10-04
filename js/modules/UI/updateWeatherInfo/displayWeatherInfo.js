@@ -18,6 +18,7 @@ import {
 } from "../../elements.js";
 import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
 import { getCurrentTime } from "../../utilities/getTodayDateTime.js";
+import { changeBgImage } from "../../utilities/randomBgImage.js";
 import { lowerCase } from "../../utilities/stringFn.js";
 import placeLocation from "../PlaceLocation/placeLocation.js";
 import showToastMessage from "../toastMessage/showToastMessage.js";
@@ -43,6 +44,8 @@ export default function displayWeatherInfo() {
   console.log(main, "main");
 
   placeLocation();
+
+  changeBgImage(main);
 
   weatherIcon.src = `./assets/images/icons/weather-type/${lowerCase(main)}.png`;
 

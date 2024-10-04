@@ -17,6 +17,9 @@ const cityNameOptionsContainer = selectElm(".city-name-options");
 
 const submitBtn = selectElm('input[type="submit"');
 
+const modalOverlayContainer = selectElm(".modal-overlay");
+const closeModalContainer = selectElm(".close-modal");
+
 const modalForm = selectElm("#modal-form");
 
 const modalCountryNameInputContainer = selectElm(
@@ -69,6 +72,7 @@ export {
   cityNameInput,
   cityNameOptionsContainer,
   closeMenuBarContainer,
+  closeModalContainer,
   cloudPercentage,
   countryFlag,
   countryNameInputContainer,
@@ -92,6 +96,7 @@ export {
   modalCountryNameOptionsContainer,
   modalForm,
   modalNameInput,
+  modalOverlayContainer,
   modalSubmitBtn,
   nameInput,
   pressureValue,

@@ -564,7 +564,7 @@ form input[type="submit"]:disabled {
 
 .toast-message-container {
   position: absolute;
-  bottom: 5px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
   background-color: green;
@@ -593,9 +593,59 @@ form input[type="submit"]:disabled {
 }
 
 /* modal  */
-
 .modal-overlay {
   display: none;
+}
+
+/* loader  */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--afacad-font);
+  font-weight: 600;
+}
+
+.loading-container img {
+  width: 2vw;
+  animation: loaderImgAnim 1.5s infinite;
+}
+
+@keyframes loaderImgAnim {
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.loading-container .loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container .loading-dots {
+  display: block;
+  width: 0;
+  text-wrap: nowrap;
+  overflow: hidden;
+  animation: visibleLoadingDots 3s infinite;
+}
+
+@keyframes visibleLoadingDots {
+  10% {
+    width: 10%;
+  }
+  20% {
+    width: 20%;
+  }
+  30% {
+    width: 30%;
+  }
 }
 
 @media (min-width: 360px) {
@@ -939,7 +989,7 @@ form input[type="submit"]:disabled {
   .modal-overlay {
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -950,6 +1000,7 @@ form input[type="submit"]:disabled {
   }
 
   .search-container {
+    position: relative;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -960,6 +1011,15 @@ form input[type="submit"]:disabled {
     background-color: #7ed6df;
     border-radius: 20px;
     box-shadow: 3px 3px 3px #070707;
+  }
+
+  .close-modal {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    font-size: 1.4rem;
+    color: #4e0909;
+    cursor: pointer;
   }
 
   .search-container .logo-title {
@@ -994,5 +1054,9 @@ form input[type="submit"]:disabled {
 
   #modal-form .country-name-options img {
     width: 2vw;
+  }
+
+  .toast-message-container {
+    width: 30%;
   }
 }

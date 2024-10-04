@@ -41,8 +41,11 @@ export default function placeLocation() {
         </div>
     `;
   if (screen.width >= 1024) {
+    console.log("came");
     insertAdjacentHtml(header, locationInfoHtml, "beforeend");
-  } else {
+  }
+  if (screen.width < 1024) {
+    console.log("came");
     insertAdjacentHtml(
       sidebarUpperTopContainer,
       locationInfoHtml,

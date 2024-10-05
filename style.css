@@ -302,6 +302,12 @@ body {
   color: #464545;
 }
 
+.wind-info .weather-data-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
 .unit-tooltip {
   width: 80px;
   height: auto;

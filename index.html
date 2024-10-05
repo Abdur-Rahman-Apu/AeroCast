@@ -8,6 +8,7 @@
 
     <!-- favicon  -->
     <link rel="shortcut icon" href="./assets/images/logo/logo.png" type="image/x-icon">
+
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,30 +24,46 @@
 </head>
 
 <body>
+
+    <!-- main application part  -->
     <section class="container">
+
+        <!-- sidebar section start from here  -->
         <aside class="sidebar">
+
+            <!-- sidebar upper part start  -->
             <div class="sidebar-upper">
 
+                <!-- For search location  -->
+                <!-- this part will be visible from the 1024px screen size  -->
                 <div class="sidebar-upper-top-lg-screen-search">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <p class="search-box">search for location...</p>
                 </div>
 
+
                 <div class="sidebar-upper-overlay">
 
+                    <!-- sidebar upper top will be hide for the large screen (min:1024px) -->
                     <div class="sidebar-upper-top">
-
+                        <!-- humburger menu for mobile devices   -->
                         <div class="humburger-menu">
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
+
+                    <!-- this part is for showing the weather type, temperature and clouds percentage  -->
                     <div class="sidebar-upper-bottom">
+
+                        <!-- current weather info  -->
                         <div class="weather-info">
                             <img src="./assets/images/icons/weather-type/clear.png"
                                 alt="It is an icon which indicates the current weather" class="weather-type-icon">
                             <p class="weather-type">Haze</p>
                             <p class="cloud-percentage">Clouds: 70%</p>
                         </div>
+
+                        <!-- current temperature info  -->
                         <div class="temperature-info">
                             <span class="temperature">27</span>
                             <p>o</p>
@@ -57,29 +74,49 @@
                 </div>
             </div>
 
-            <div class="sidebar-bottom"></div>
         </aside>
+        <!-- sidebar section end from here  -->
+
+        <!-- header section start from here  -->
+        <!-- Visible from 1024px screen size  -->
         <header class="header">
+            <!-- logo and website name  -->
             <div class="logo-title">
                 <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
                 <p class="website-name">AeroCast</p>
             </div>
+
+            <!-- toggle option for switching the weather unit  -->
             <div class="transform-unit">
+
+                <!-- celcius unit  -->
                 <div class="transform-unit-celcius" data-unit="c">
                     <span class="celcius" data-unit="c"><sup data-unit="c">o</sup>C</span>
                 </div>
+
+                <!-- farenhite unit  -->
                 <div class="transform-unit-farenhite" data-unit="f">
                     <span class="farenhite" data-unit="f"><sup data-unit="f">o</sup>F</span>
                 </div>
             </div>
         </header>
+        <!-- header section end here  -->
+
+        <!-- main part start from here  -->
         <main class="main">
+
+            <!-- title of the section and time when the weather data updated in the api  -->
             <div class="main-title">
                 <p class="line"></p>
                 <p class="title">Weather Today</p>
                 <p class="update-time">Updated at: <span class="data-update-time"></span></p>
             </div>
+
+
+            <!-- To show various weather parameters  -->
             <div class="weather-data-container">
+
+                <!-- feels like temperature  -->
                 <div class="feels-like-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/thermometer.svg"
@@ -90,6 +127,8 @@
                         <p class="feel-like-value">16 <sup>o</sup></p>
                     </div>
                 </div>
+
+                <!-- humidity value  -->
                 <div class="humidity-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/humidity.png" alt="This icon is indicating the humidity">
@@ -99,17 +138,24 @@
                         <p class="humidity-value">16%</p>
                     </div>
                 </div>
+
+                <!-- wind value  -->
                 <div class="wind-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/wind.svg" alt="This icon is indicating the wind">
                     </div>
                     <div class="wind-info">
-                        <p class="weather-data-title">Wind <i
-                                class="fa-duotone fa-solid fa-circle-info unit-info-icon"></i> <span
-                                class="unit-tooltip wind-unit">meter/sec</span></p>
+                        <p class="weather-data-title">Wind
+                            <!-- tooltip to show the wind measurement unit  -->
+                            <i class="fa-duotone fa-solid fa-circle-info unit-info-icon"></i>
+                            <span class="unit-tooltip wind-unit">meter/sec</span>
+                        </p>
                         <p class="wind-value">24</p>
                     </div>
                 </div>
+
+
+                <!-- pressure value. Will be visible from the 1024px screen size device  -->
                 <div class="pressure-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/atmospheric.png"
@@ -120,17 +166,25 @@
                         <p class="pressure-value">24 hPa</p>
                     </div>
                 </div>
+
+                <!-- max and minimum temperature value. Will be visible from the 1024px screen size device -->
                 <div class="temperature-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/temperature.png" alt="This icon is indicating the wind">
                     </div>
                     <p class="weather-data-title">Max & Min Temp</p>
+
+                    <!-- max and min temperature value  -->
                     <div class="max-min-temperature-info">
+
+                        <!-- max-temperature value  -->
                         <div class="max-temp-info">
                             <img src="./assets/images/icons/arrow-up.svg"
                                 alt="This icon is indicating the maximum temperature">
                             <p class="max-temp-value">18 <sup>o</sup></p>
                         </div>
+
+                        <!-- min temperature value  -->
                         <div class="min-temp-info">
                             <img src="./assets/images/icons/arrow-down.svg"
                                 alt="This icon is indicating the minimum temperature info">
@@ -138,6 +192,9 @@
                         </div>
                     </div>
                 </div>
+
+
+                <!-- sunrise and sunset value  -->
                 <div class="sunrise-sunset-container">
                     <div class="weather-icon">
                         <img src="./assets/images/icons/sun.svg" alt="This icon is indicating the sunrise and sunset">
@@ -145,12 +202,17 @@
 
                     <p class="weather-data-title">Sunrise & Sunset Info</p>
 
+                    <!-- sunrise and sunset value  -->
                     <div class="sunrise-sunset-info">
+
+                        <!-- sunrise value  -->
                         <div class="sunrise-info">
                             <img src="./assets/images/icons/arrow-up.svg"
                                 alt="This icon is indicating the sunrise and sunset">
                             <p class="sunrise-value">5:01</p>
                         </div>
+
+                        <!-- sunset value  -->
                         <div class="sunset-info">
                             <img src="./assets/images/icons/arrow-down.svg"
                                 alt="This icon is indicating the sunrise and sunset">
@@ -158,37 +220,54 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
+            <!-- various weather parameter show end  -->
+
+            <!-- a div to give a shape for only devices which screen size less than 1024px  -->
             <div class="mobile-device-main-part-absolute-section"></div>
         </main>
-        <!-- <footer class="footer">footer</footer> -->
+        <!-- main part end here  -->
     </section>
 
-    <!-- menu bar  -->
+    <!-- menu bar for devices which screen is less than 1024px  -->
     <div class="menu-bar-overlay">
+        <!-- menu bar items section start  -->
         <div class="menu-bar-items">
+
+            <!-- icon to close the menubar  -->
             <div class="close-menubar">
                 <i class="fa-solid fa-xmark"></i>
             </div>
 
+
+            <!-- menu bar main items start from here  -->
             <div class="menu-bar-main-items">
+
+                <!-- logo and title  -->
                 <div class="logo-title">
                     <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
                     <p class="website-name">AeroCast</p>
                 </div>
+
+                <!-- search location part start from here  -->
                 <div class="search-country-weather">
 
+                    <!-- form to provide country and city name  -->
                     <form id="menu-form">
                         <!-- country name input  -->
                         <div class="country-name-container">
                             <label for="country-name">Country Name</label>
                             <div class="country-name-input">
+                                <!-- input  -->
                                 <input type="text" id="country-name" name="country-name"
-                                    placeholder="Enter country name..." autocapitalize="on">
+                                    placeholder="Enter country name..." autocapitalize="on" autocomplete="off">
+
+                                <!-- country flag  -->
                                 <img src="./assets/images/flag.png" alt="This image indicating the flag"
                                     class="country-flag">
-                                <!-- <p class="name-input-err-msg">Please fill this field</p> -->
+
+                                <!-- countries list  -->
                                 <div class="country-name-options">
                                 </div>
                             </div>
@@ -197,61 +276,82 @@
                         <!-- country city input  -->
                         <div class="country-city-input">
                             <label for="city-name">City Name</label>
+                            <!-- input  -->
                             <input type="text" id="city-name" name="city-name" placeholder="Enter city name..." disabled
-                                autocapitalize="on">
-                            <!-- <p class="city-input-err-msg">Please fill up the value</p> -->
+                                autocapitalize="on" autocomplete="off">
+
+                            <!-- list of cities  -->
                             <div class="city-name-options">
                             </div>
                         </div>
+
+                        <!-- submit button  -->
                         <input type="submit" value="Search" disabled>
                     </form>
+                    <!-- form end  -->
                 </div>
+                <!-- end search section container  -->
+
             </div>
+            <!-- menu bar main items section end  -->
         </div>
+        <!-- menubar items section end  -->
     </div>
 
-    <!-- modal for search weather information  -->
+    <!-- modal for search weather information. Visible from 1024px screen size  -->
     <div class="modal-overlay">
+
+        <!-- modal location search container start from here  -->
         <div class="search-container">
 
+            <!-- icon of closing the modal  -->
             <div class="close-modal">
                 <i class="fa-solid fa-circle-xmark"></i>
             </div>
 
+            <!-- logo and title  -->
             <div class="logo-title">
                 <img src="./assets/images/logo/logo.png" alt="This image is indicating the logo of the application">
                 <p class="website-name">AeroCast</p>
             </div>
 
+            form start from here
             <form id="modal-form">
-                <!-- country name input  -->
+
+                <!-- country name input start from here  -->
                 <div class="country-name-container">
                     <label for="country-name">Country Name</label>
                     <div class="country-name-input">
                         <input type="text" id="country-name" name="country-name" placeholder="Enter country name..."
-                            autocapitalize="on">
+                            autocapitalize="on" autocomplete="off">
+
+                        <!-- country flag  -->
                         <img src="./assets/images/flag.png" alt="This image indicating the flag" class="country-flag">
-                        <!-- <p class="name-input-err-msg">Please fill this field</p> -->
+
+                        <!-- countries list  -->
                         <div class="country-name-options">
                         </div>
                     </div>
                 </div>
+                <!-- country name input end  -->
 
-                <!-- country city input  -->
+                <!-- country city input start from here -->
                 <div class="country-city-input">
                     <label for="city-name">City Name</label>
+                    <!-- input  -->
                     <input type="text" id="city-name" name="city-name" placeholder="Enter city name..." disabled
-                        autocapitalize="on">
-                    <!-- <p class="city-input-err-msg">Please fill up the value</p> -->
+                        autocapitalize="on" autocomplete="off">
+
+                    <!-- cities list  -->
                     <div class="city-name-options">
                     </div>
                 </div>
+                <!-- country city input end  -->
+
                 <input type="submit" value="Search" disabled>
 
-
-
             </form>
-
+            <!-- form end here  -->
         </div>
     </div>
 

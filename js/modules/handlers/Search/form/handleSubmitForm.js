@@ -28,4 +28,7 @@ export default async function handleSubmitForm(e) {
 
   toggleLoader({ state: false });
   showHideSubmitBtn({ submitBtn, state: true });
+
+  // reset the form
+  form.reset();
 }

@@ -3,8 +3,8 @@ import { addStyle } from "../../utilities/domTask.js";
 
 export default function toggleMenuBar(targetState) {
   console.log(targetState);
-  const hideMenuContainer = { display: "none" };
-  const showMenuContainer = { display: "block" };
+  const hideMenuContainer = { display: "none", animation: "vanish 1s" };
+  const showMenuContainer = { display: "block", animation: "showAnimation 1s" };
 
   addStyle(
     menubarContainer,
@@ -12,10 +12,10 @@ export default function toggleMenuBar(targetState) {
   );
 
   const hideMenuItemsContainer = {
-    transform: "translateX(100%)",
+    animation: "translateGoAnimation 1s",
   };
   const showMenuItemsContainer = {
-    transform: "translateX(0)",
+    animation: "translateCameAnimation 1s",
   };
 
   addStyle(

@@ -15,17 +15,17 @@ import showHideSubmitBtn from "../submitBtn/showHideSubmitBtn.js";
 export default async function handleSubmitForm(e) {
   e.preventDefault();
 
-  // hide the submit button
-  showHideSubmitBtn({ submitBtn, state: false });
-
-  // show the loader
-  toggleLoader({ state: true, parent: form, pos: "beforeend" });
-
   // decide the elements for the modal and menu based on the target element
   const form = isModal(e) ? modalForm : menuForm;
   const submitBtn = isModal(e) ? modalSubmitBtn : submitBtn;
   const countryName = isModal(e) ? modalNameInput.value : nameInput.value;
   const cityName = isModal(e) ? modalCityNameInput.value : cityNameInput.value;
+
+  // hide the submit button
+  showHideSubmitBtn({ submitBtn, state: false });
+
+  // show the loader
+  toggleLoader({ state: true, parent: form, pos: "beforeend" });
 
   // send api request by using country and city name
   await sendApiRequest({ countryName, cityName });

@@ -1,7 +1,7 @@
 import { insertAdjacentHtml, selectElm } from "../../utilities/domTask.js";
 
 export default function toggleLoader({ state, parent, pos }) {
-  console.log(parent, pos);
+  //  state: true -> show loader,  false -> hide loader
   const loaderHtml = `
   <div class="loading-container">
         <img src="./assets/images/loading.png" alt="This image is indicating the loader">

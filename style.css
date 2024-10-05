@@ -81,6 +81,10 @@ body {
   margin-right: 3px;
 }
 
+.location-name {
+  font-weight: 800;
+}
+
 .date {
   font-size: 0.9rem;
   font-weight: 700;

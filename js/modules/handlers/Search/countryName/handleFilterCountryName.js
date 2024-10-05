@@ -4,24 +4,20 @@ import isModal from "../../../UI/isModal/isModal.js";
 import { getCountryInfoIntoArr } from "../../../utilities/countryName.js";
 import { lowerCase } from "../../../utilities/stringFn.js";
 import toggleCityName from "../cityName/toggleCityName.js";
-import toggleSubmitBtn from "../SubmitBtn/toggleSubmitBtn.js";
+import toggleSubmitBtn from "../submitBtn/toggleSubmitBtn.js";
 
+// filter the countries based on the typed country name
 export default function handleFilterCountryName(e) {
-  console.log(e.target.value, "value is type name input");
   const countryNameInputValue = e.target.value;
-
-  console.log(e.keyCode);
+  let countryFlagElm = isModal(e) ? modalCountryFlag : countryFlag;
 
   const countryNames = getCountryInfoIntoArr(countryNameInputValue);
-
-  console.log(countryNames, "country names");
 
   const isTypedCountryMatched =
     countryNames.length === 1 &&
     lowerCase(countryNames[0].name) === lowerCase(countryNameInputValue);
 
-  let countryFlagElm = isModal(e) ? modalCountryFlag : countryFlag;
-
+  // if matched, then update the flag image url otherwise set the default image url
   if (isTypedCountryMatched) {
     countryFlagElm.src = countryNames[0].flag;
   } else {

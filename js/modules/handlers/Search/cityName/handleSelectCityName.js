@@ -7,8 +7,7 @@ import {
 import isModal from "../../../UI/isModal/isModal.js";
 
 export default function handleSelectCityName(e) {
-  console.log(e.target);
-  console.log(e.target.innerText);
+  // update the city input value and hide the cities list
 
   const cityName = e.target.innerText;
 

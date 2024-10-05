@@ -5,36 +5,35 @@ import {
 } from "./countryName.js";
 
 export default function updateGlobalData({ data, countryName, cityName }) {
-  console.log(data, countryName, cityName);
+  // checking country name existence
   if (countryName) {
+    // if country name exist
+
+    // get country code from the country name
     const countryCode = getCountryCode(countryName);
 
-    console.log(getCountryCode, "country code");
+    // checking city name existence and update the global weather data
     if (cityName) {
       weather.cityName = cityName;
     } else {
       weather.cityName = null;
     }
+
+    // update the global weather data
     Object.assign(weather, { data, countryName, countryCode });
-    // weather = { ...weather, data, countryName, countryCode };
   } else {
+    // country name is not found
+
+    // values of the data variable is got from the api
     const {
       name,
       sys: { country: code },
     } = data;
 
-    console.log(data, "upgd");
-
+    // get the country name from the country code
     const countryNameFromCode = getCountryNameFromCountryCode(code);
 
-    // weather = {
-    //   ...weather,
-    //   data,
-    //   countryName,
-    //   cityName: name,
-    //   countryCode: country,
-    // };
-
+    // update the global variable weather
     Object.assign(weather, {
       data,
       countryName: countryNameFromCode,

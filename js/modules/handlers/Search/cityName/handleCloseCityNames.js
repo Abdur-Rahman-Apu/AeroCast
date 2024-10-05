@@ -5,7 +5,7 @@ import {
 import isModal from "../../../UI/isModal/isModal.js";
 
 export default function handleCloseCityNames(e) {
-  console.log("close country names");
+  // close the cities list
   setTimeout(() => {
     isModal(e)
       ? (modalCityNameOptionsContainer.innerHTML = "")

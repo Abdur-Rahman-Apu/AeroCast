@@ -6,17 +6,20 @@ import {
   getCurrentTime,
   getTodayDate,
 } from "../../utilities/getTodayDateTime.js";
-import displayCurrentDate from "../Date/displayCurrentDate.js";
-import displayCurrentTime from "../Time/displayCurrentTime.js";
+import displayCurrentDate from "../date/displayCurrentDate.js";
+import displayCurrentTime from "../time/displayCurrentTime.js";
 
 export default function placeLocation() {
+  // if old location is exist then remove the element
   if (document.querySelector(".location-date")) {
     document.querySelector(".location-date").remove();
   }
 
+  // format the location name
+  // if city exist : Dhaka, BD
+  // if city is absent: Bangladesh
   const { countryName, cityName, countryCode } = weather;
 
-  console.log(countryName, cityName, countryCode);
   let locationName = "";
 
   if (cityName) {
@@ -25,8 +28,10 @@ export default function placeLocation() {
     locationName = `${countryName}`;
   }
 
+  // get the country flag
   const flgUrl = countryInfo[countryName]?.flag ?? "./assets/images/flag.png";
 
+  // location related html markup
   const locationInfoHtml = `
         <div class="location-date">
             <p class="location">
@@ -40,12 +45,14 @@ export default function placeLocation() {
             </p>
         </div>
     `;
+
+  // for large device: locaton will be placed in the header end side
   if (screen.width >= 1024) {
-    console.log("came");
     insertAdjacentHtml(header, locationInfoHtml, "beforeend");
   }
+
+  // for small and table device: location will be placed in the top of the sidebar
   if (screen.width < 1024) {
-    console.log("came");
     insertAdjacentHtml(
       sidebarUpperTopContainer,
       locationInfoHtml,
@@ -53,6 +60,7 @@ export default function placeLocation() {
     );
   }
 
+  // update the current time and date after couple of seconds
   displayCurrentTime();
 
   displayCurrentDate();

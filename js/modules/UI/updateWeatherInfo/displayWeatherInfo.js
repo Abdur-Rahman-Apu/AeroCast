@@ -20,7 +20,7 @@ import getSunriseOrSunsetTime from "../../utilities/getSunriseOrSunsetTime.js";
 import { getCurrentTime } from "../../utilities/getTodayDateTime.js";
 import { changeBgImage } from "../../utilities/randomBgImage.js";
 import { lowerCase } from "../../utilities/stringFn.js";
-import placeLocation from "../PlaceLocation/placeLocation.js";
+import placeLocation from "../placeLocation/placeLocation.js";
 import showToastMessage from "../toastMessage/showToastMessage.js";
 
 export default function displayWeatherInfo() {
@@ -34,19 +34,17 @@ export default function displayWeatherInfo() {
       dt,
     },
     unit,
-    countryName,
-    cityName,
-    countryCode,
   } = weather;
 
-  const { main, description, icon } = mainWeatherInfo[0];
+  const { main } = mainWeatherInfo[0];
 
-  console.log(main, "main");
-
+  // insert location info into the UI
   placeLocation();
 
+  // change the sidebar background image
   changeBgImage(main);
 
+  // update weather related info
   weatherIcon.src = `./assets/images/icons/weather-type/${lowerCase(main)}.png`;
 
   weatherType.innerText = main;
@@ -65,15 +63,16 @@ export default function displayWeatherInfo() {
 
   windUnit.innerText = `${unit === "metric" ? "meter/sec" : "miles/hour"}`;
 
-  console.log(sunrise, sunset);
   sunriseValue.innerText = getSunriseOrSunsetTime(sunrise);
   sunsetValue.innerText = getSunriseOrSunsetTime(sunset);
 
+  // for large devices
   if (screen.width >= 1024) {
     pressureValue.innerText = `${pressure} hPa`;
     maxTempValue.innerHTML = `${temp_max}<sup>o</sup>`;
     minTempValue.innerHTML = `${temp_min}<sup>o</sup>`;
   }
 
+  // show success message for successful data update
   showToastMessage({ message: "Weather data updated", type: "success" });
 }

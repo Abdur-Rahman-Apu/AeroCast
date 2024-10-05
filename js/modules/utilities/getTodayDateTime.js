@@ -1,3 +1,4 @@
+// format: Oct 5
 function getTodayDate() {
   const month = [
     "Jan",
@@ -24,12 +25,14 @@ function getTodayDate() {
   return `${actualMonth} ${actualDate}`;
 }
 
+// format: 11:00 PM
 const getCurrentTime = (time) => {
   let dateConstructor = new Date();
 
   if (time) {
     dateConstructor = new Date(time);
   }
+
   const date = dateConstructor.toLocaleTimeString().split(":");
 
   const timeIndicator = date[date.length - 1].split(" ")[1];

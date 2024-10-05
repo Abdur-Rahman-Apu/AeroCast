@@ -8,24 +8,29 @@ import {
   lowerCase,
 } from "../../../utilities/stringFn.js";
 
+// filter the cities list based on the user input
 export default function handleFilterCityName(e) {
   const cityName = e.target.value;
-  console.log(cityName, "city name");
 
   const countryName = capitalize(
     isModal(e) ? modalNameInput.value : nameInput.value
   );
-  console.log(countryName, "country name");
+
+  // get cities of the country
   const cities = getCities(countryName);
 
   let filteredCities = [];
+
   if (cityName) {
+    // filter cities based on the user input
     filteredCities = cities.filter((city) =>
       isInclude(lowerCase(city), lowerCase(cityName))
     );
   } else {
+    // insert all cities
     filteredCities = cities;
   }
 
+  // display cities
   displayCityNames(e, filteredCities);
 }

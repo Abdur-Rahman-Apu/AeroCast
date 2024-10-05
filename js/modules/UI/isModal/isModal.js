@@ -1,5 +1,4 @@
 export default function isModal(e) {
-  console.log(e.target);
-
+  // checking the target elements parent is either modal form or not
   return e.target.closest("#modal-form") ? true : false;
 }

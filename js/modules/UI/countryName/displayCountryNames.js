@@ -6,6 +6,7 @@ import { addStyle } from "../../utilities/domTask.js";
 import isModal from "../isModal/isModal.js";
 
 export default function displayCountryNames(e, countryNames) {
+  // html markup with country name and country flag
   const countryNameInfoHtml = countryNames
     .map((item) => {
       return `
@@ -17,6 +18,7 @@ export default function displayCountryNames(e, countryNames) {
     })
     .join("");
 
+  // added style for modal country name options and menu country name options based on the condition
   if (isModal(e)) {
     modalCountryNameOptionsContainer.innerHTML = countryNameInfoHtml;
 

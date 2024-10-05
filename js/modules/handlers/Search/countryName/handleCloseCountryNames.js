@@ -5,9 +5,7 @@ import {
 import isModal from "../../../UI/isModal/isModal.js";
 
 export default function handleCloseCountryNames(e) {
-  console.log(e.target, e, "close country");
-  console.log(isModal(e));
-  console.log("close country names");
+  // close country name options after 500 ms
   setTimeout(() => {
     if (isModal(e)) {
       modalCountryNameOptionsContainer.innerHTML = "";

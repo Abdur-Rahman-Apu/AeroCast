@@ -10,15 +10,12 @@ export default async function getWeatherInfo({ url, countryName, cityName }) {
     const res = await fetch(url);
     const weatherData = await res.json();
 
-    console.log(weatherData);
-
+    // handle api error using the error code
     if (weatherData.cod === "400" || weatherData.cod === "404") {
       console.log(weatherData.message);
       showToastMessage({ message: weatherData.message, type: "error" });
       return;
     }
-
-    console.log("update global data");
 
     // update the global data
     updateGlobalData({
@@ -27,17 +24,13 @@ export default async function getWeatherInfo({ url, countryName, cityName }) {
       cityName,
     });
 
-    console.log("update storage");
-
     // update into storage
     storeIntoStorage(weather);
-
-    console.log("update weather");
 
     // display in the UI
     displayWeatherInfo();
   } catch (err) {
-    console.log(err.message, "err");
+    // show toast message
     showToastMessage({ message: err.message, type: "error" });
     return;
   }

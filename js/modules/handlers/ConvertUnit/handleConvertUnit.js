@@ -7,7 +7,6 @@ import { addStyle } from "../../utilities/domTask.js";
 import sendApiRequest from "../../utilities/sendApiRequest.js";
 
 async function sendRequest() {
-  console.log("send request");
   await sendApiRequest({
     countryName: weather.countryName,
     cityName: weather.cityName,
@@ -33,24 +32,29 @@ const deActiveStyle = (elm) => {
 };
 
 export default async function handleConvertUnit(e) {
-  console.log("click");
-  console.log(e.target);
+  // get the selected unit name
   const unit = e.target.dataset.unit;
 
-  console.log(unit, weather.unit);
-
   if (unit === "c" && weather.unit !== "metric") {
+    // selected celcius and current unit is not metric
     activeStyle(transformUnitCelcius);
     deActiveStyle(transformUnitFarenhite);
-    console.log("came c");
+
+    // update the unit
     weather.unit = "metric";
+
+    // send api request
     await sendRequest();
   }
   if (unit === "f" && weather.unit !== "imperial") {
+    // selected farenheit and current unit is not imperial
     activeStyle(transformUnitFarenhite);
     deActiveStyle(transformUnitCelcius);
-    console.log("came f");
+
+    // update the unit
     weather.unit = "imperial";
+
+    // send api request
     await sendRequest();
   }
 }

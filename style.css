@@ -610,6 +610,28 @@ form input[type="submit"]:disabled {
   display: none;
 }
 
+@keyframes showAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes vanish {
+  from {
+    opacity: 1;
+    display: flex;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
 /* loader  */
 .loading-container {
   display: flex;

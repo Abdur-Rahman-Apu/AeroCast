@@ -964,16 +964,15 @@ form input[type="submit"]:disabled {
     border: 1px solid rgb(199, 196, 196);
     box-shadow: 2px 2px 2px #bebcbc;
     cursor: pointer;
-    background-color: #f1f2f6;
+    background: linear-gradient(to right, #feffff, #fae4bf);
     transition: all 1s;
   }
   .weather-data-container > div:hover {
-    box-shadow: 5px 5px 5px #bebcbc;
+    box-shadow: 5px 5px 5px #e9e4e4;
   }
 
   .weather-data-container > div .weather-icon {
     width: 5vw;
-    filter: drop-shadow(3px 3px 3px #898d89);
   }
 
   .weather-data-container > div.pressure-container,

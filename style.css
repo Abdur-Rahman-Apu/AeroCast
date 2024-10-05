@@ -1,3 +1,5 @@
+/* mobile first design approach followed */
+
 * {
   margin: 0;
   padding: 0;
@@ -39,9 +41,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px; */
-  /* box-shadow: 3px 3px 2px #565555; */
 }
 
 .sidebar-upper-top-lg-screen-search {
@@ -55,7 +54,6 @@ body {
   left: 5%;
   border-radius: 20px;
   background: rgba(22, 22, 22, 0.235);
-  /* background: rgba(22, 22, 22, 0); */
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -96,7 +94,6 @@ body {
 
 .humburger-menu i {
   color: #fff;
-  /* font-size: 1.6rem; */
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -113,8 +110,6 @@ body {
 
 .weather-type-icon {
   width: 25vw;
-  /* background-color: rgba(104, 99, 99, 0.199); */
-  /* border-radius: 50%; */
 }
 
 .weather-type {
@@ -144,7 +139,6 @@ body {
 }
 
 .temperature {
-  /* font-size: 6rem; */
   font-size: 4rem;
   color: #fff;
 }
@@ -260,7 +254,6 @@ body {
 .main-title .title {
   text-align: center;
   padding-top: 5px;
-  /* font-size: 1.4rem; */
   font-size: 1.3rem;
   font-weight: 800;
 }
@@ -375,7 +368,6 @@ body {
 /* header part start  */
 .header {
   grid-area: h;
-  /* background-color: red; */
   display: none;
 }
 
@@ -408,6 +400,7 @@ body {
     transform: translateX(0%);
   }
 }
+
 @keyframes translateGoAnimation {
   from {
     transform: translateX(0%);
@@ -450,14 +443,12 @@ body {
 .logo-title .website-name {
   font-family: var(--afacad-font);
   font-size: 1.5rem;
-  /* font-size: 1.8rem; */
   font-weight: 800;
   color: #2d3436;
 }
 
 .logo-title img {
   width: 20vw;
-  /* width: 25vw; */
 }
 
 #menu-form {
@@ -524,11 +515,11 @@ form input[type="submit"]:disabled {
 
 .country-name-input .country-flag {
   width: 8vw;
+  object-fit: contain;
   position: absolute;
   top: 50%;
   right: -8.5svw;
   transform: translateY(-50%);
-  object-fit: contain;
 }
 
 .country-name-options {
@@ -590,7 +581,6 @@ form input[type="submit"]:disabled {
 }
 
 /* toast message style  */
-
 .toast-message-container {
   position: absolute;
   top: 5px;
@@ -840,18 +830,10 @@ form input[type="submit"]:disabled {
     width: 65%;
     height: 35px;
     background-color: #f7f1e3;
-    /* color: #fff; */
     border-radius: 20px;
     font-weight: 500;
-    /* z-index: 1000; */
     cursor: pointer;
   }
-
-  /* .sidebar-upper-top-lg-screen input {
-    background-color: transparent;
-    border: none;
-    outline: none;
-  } */
 
   .sidebar-upper-overlay {
     top: 50%;
@@ -875,7 +857,6 @@ form input[type="submit"]:disabled {
     justify-content: space-between;
     align-items: center;
     padding: 0 8px;
-    /* background-color: #ffd87d; */
     background: linear-gradient(to right, #82ccdd, #fad390);
     box-shadow: 0 5px 5px #c5c1c1;
   }
@@ -1045,7 +1026,6 @@ form input[type="submit"]:disabled {
   }
 
   /* modal  */
-
   .modal-overlay {
     width: 100%;
     height: 100vh;

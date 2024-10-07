@@ -164,6 +164,23 @@ https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}
 https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_KEY}
 ```
 
+---
+
+## 🙏 Acknowledgments
+
+A big thank you to:
+
+- [OpenWeatherMap](https://openweathermap.org/) for providing the weather data.
+- [Netlify](https://www.netlify.com/) for hosting the project.
+- [Pinterest](https://www.pinterest.com/) for image inspiration.
+- [FontAwesome](https://fontawesome.com/) for icons.
+- [IconDuck](https://iconduck.com/) for free icons.
+- [Google Fonts](https://fonts.google.com/) for fonts.
+- [Freepik](https://www.freepik.com/) and [Flaticon](https://www.flaticon.com/) for vector icons and images.
+- [JavaScript Ninja Bootcamp](https://webdeveloperbd.net/js-bootcamp/) for inspiring me!
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
